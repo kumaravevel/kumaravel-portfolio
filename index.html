@@ -1,559 +1,603 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Kumaravel M · Backend Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <title>Kumaravel M · Backend Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
 
-    <!-- Bootstrap 5 + icons -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <!-- Google Font (Inter + space for display) -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Devicons — real colored tech icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
-    <!-- separate CSS (css/style.css) -->
-    <link rel="stylesheet" href="style.css" />
-    
-    <!-- Custom style for white toggler icon -->
-    <style>
-      /* Make navbar toggler icon white */
-      .navbar-toggler {
-        border-color: rgba(255, 255, 255, 0.5) !important;
-      }
-      
-      .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-      }
-      
-      /* Optional: toggler hover effect */
-      .navbar-toggler:hover {
-        border-color: rgba(255, 255, 255, 0.9) !important;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- ===== NAVBAR (elevated glass) ===== -->
-    <nav class="navbar navbar-expand-lg sticky-top">
-      <div class="container">
-        <a class="navbar-brand" href="#"
-          >K<span class="thin">umaravel</span> M</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navMenu"
-          aria-controls="navMenu"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navMenu">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
+  <!-- Font Awesome 6 — all UI icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mobile-close" onclick="closeMobile()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <a href="#home"       onclick="closeMobile('#home')">
+      <i class="fa-solid fa-house"></i> Home
+    </a>
+    <a href="#about"      onclick="closeMobile('#about')">
+      <i class="fa-solid fa-user"></i> About
+    </a>
+    <a href="#skills"     onclick="closeMobile('#skills')">
+      <i class="fa-solid fa-layer-group"></i> Skills
+    </a>
+    <a href="#experience" onclick="closeMobile('#experience')">
+      <i class="fa-solid fa-briefcase"></i> Experience
+    </a>
+    <a href="#projects"   onclick="closeMobile('#projects')">
+      <i class="fa-solid fa-diagram-project"></i> Projects
+    </a>
+    <a href="#contact"    onclick="closeMobile('#contact')">
+      <i class="fa-solid fa-envelope"></i> Contact
+    </a>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a class="nav-logo" href="#home">M<span>.</span>Kumaravel</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact" class="nav-cta">
+          <i class="fa-solid fa-handshake"></i> Hire Me
+        </a></li>
+      </ul>
+      <button class="hamburger" onclick="document.getElementById('mobileNav').classList.add('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="hero-container">
+
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <i class="fa-solid fa-terminal"></i> Backend Developer
         </div>
-      </div>
-    </nav>
-
-    <!-- ===== HERO / HOME ===== -->
-    <section id="home" class="hero-section">
-      <div class="container">
-        <div class="row align-items-center min-vh-100 py-5">
-          <div class="col-lg-7 text-lg-start text-center">
-            <div class="hero-badge-wrapper">
-              <span class="hero-badge-pill">⚡ Backend Developer </span>
-            </div>
-            <h1 class="display-3 fw-bold hero-name">Kumaravel M</h1>
-            <p class="fs-4 text-secondary mb-4">
-              I Build
-              <span
-                class="txt-rotate"
-                data-period="2000"
-                data-rotate='[ "RESTful APIs.", "Scalable Backends.","MYSQL Table Design.","Stored Procedures.", "Payment Integrations.","Payout Integration.", "Location Based Search." ]'
-              ></span>
-            </p>
-            <div
-              class="d-flex flex-wrap gap-3 justify-content-lg-start justify-content-center"
-            >
-              <a href="#contact" class="custom-btn primary-btn"
-                ><i class="bi bi-chat-dots me-2"></i>Hire me</a
-              >
-              <a href="#projects" class="custom-btn outline-btn"
-                ><i class="bi bi-folder2-open me-2"></i>Projects</a
-              >
-            </div>
-            <!-- floating contact pills -->
-            <div class="hero-quick-info mt-5">
-              <span
-                ><i class="bi bi-envelope-fill"></i>
-                kumaravel8248@gmail.com</span
-              >
-              <span><i class="bi bi-telephone-fill"></i> +91 82482 25846</span>
-              <span><i class="bi bi-geo-alt-fill"></i> Chennai</span>
-            </div>
+        <h1 class="hero-name">Kumaravel</h1>
+        <p class="hero-role">I Build <span class="typed-text" id="typed"></span></p>
+        <p class="hero-desc">
+          Backend developer with <strong>1+ year</strong> of experience crafting RESTful APIs,
+          payment integrations, and scalable database systems. Currently based in
+          <strong>Chennai</strong>, open for opportunities.
+        </p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn-primary">
+            <i class="fa-solid fa-rocket"></i> Hire Me
+          </a>
+          <a href="#projects" class="btn-ghost">
+            View Projects <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="available-badge">
+          <div class="available-dot"></div>
+          <strong>Available</strong> for new opportunities
+        </div>
+        <div class="hero-stats">
+          <div>
+            <span class="stat-val">1<span>+</span></span>
+            <span class="stat-lbl">Years Exp</span>
           </div>
-          <div class="col-lg-5 text-center d-none d-lg-block">
-            <div class="hero-image-wrapper">
-              <div class="hero-shape"></div>
-              <!-- profile image (replace with actual if available) -->
-              <img
-                src="images/profile.jpg"
-                alt="Kumaravel"
-                class="hero-profile-img"
-              />
-            </div>
+          <div>
+            <span class="stat-val">100<span>+</span></span>
+            <span class="stat-lbl">APIs Built</span>
+          </div>
+          <div>
+            <span class="stat-val">3</span>
+            <span class="stat-lbl">Projects</span>
           </div>
         </div>
       </div>
-      <!-- soft scroll indicator -->
-      <div class="scroll-indicator">
-        <div class="mouse"></div>
-      </div>
-    </section>
 
-    <!-- ===== ABOUT ===== -->
-    <section id="about" class="section-padding">
-      <div class="container">
-        <div class="row g-5 align-items-center">
-          <div class="col-lg-5">
-            <div class="about-image-frame">
-              <img
-                src="images/profile.jpg"
-                alt="about"
-                class="img-fluid rounded-4 about-img"
-              />
+      <div class="hero-visual">
+        <div class="profile-ring">
+          <img src="images/profile.jpg" alt="Kumaravel" class="profile-img" />
+        </div>
+        <div class="float-badge fb-1">
+          <i class="devicon-nodejs-plain colored"></i> Node.js
+        </div>
+        <div class="float-badge fb-2">
+          <i class="devicon-mysql-plain colored"></i> MySQL
+        </div>
+        <div class="float-badge fb-3">
+          <i class="devicon-java-plain colored"></i> Java
+        </div>
+        <div class="float-badge fb-4">
+          <i class="devicon-spring-plain colored"></i> Spring Boot
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-item"><i class="devicon-nodejs-plain colored"></i> Node.js</div>
+      <div class="marquee-item"><i class="devicon-express-original"></i> Express</div>
+      <div class="marquee-item"><i class="devicon-java-plain colored"></i> Java</div>
+      <div class="marquee-item"><i class="devicon-spring-plain colored"></i> Spring Boot</div>
+      <div class="marquee-item"><i class="devicon-mysql-plain colored"></i> MySQL</div>
+      <div class="marquee-item"><i class="devicon-postman-plain colored"></i> REST APIs</div>
+      <div class="marquee-item"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+      <div class="marquee-item"><i class="fa-solid fa-bolt"></i> WebSockets</div>
+      <div class="marquee-item"><i class="devicon-react-original colored"></i> React</div>
+      <div class="marquee-item"><i class="devicon-nextjs-plain"></i> Next.js</div>
+      <div class="marquee-item"><i class="devicon-git-plain colored"></i> Git</div>
+      <!-- duplicate for seamless loop -->
+      <div class="marquee-item"><i class="devicon-nodejs-plain colored"></i> Node.js</div>
+      <div class="marquee-item"><i class="devicon-express-original"></i> Express</div>
+      <div class="marquee-item"><i class="devicon-java-plain colored"></i> Java</div>
+      <div class="marquee-item"><i class="devicon-spring-plain colored"></i> Spring Boot</div>
+      <div class="marquee-item"><i class="devicon-mysql-plain colored"></i> MySQL</div>
+      <div class="marquee-item"><i class="devicon-postman-plain colored"></i> REST APIs</div>
+      <div class="marquee-item"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+      <div class="marquee-item"><i class="fa-solid fa-bolt"></i> WebSockets</div>
+      <div class="marquee-item"><i class="devicon-react-original colored"></i> React</div>
+      <div class="marquee-item"><i class="devicon-nextjs-plain"></i> Next.js</div>
+      <div class="marquee-item"><i class="devicon-git-plain colored"></i> Git</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap reveal">
+          <img src="images/profile.jpg" alt="Kumaravel Muaravel" />
+        </div>
+        <div class="about-text">
+          <div class="section-tag reveal">About Me</div>
+          <h2 class="section-title reveal reveal-delay-1">Building the web<br>from the backend</h2>
+          <p class="reveal reveal-delay-2">
+            I'm a <strong>Backend Developer</strong> with a passion for building clean, efficient
+            server-side systems. I specialize in <strong>Node.js</strong>,
+            <strong>Java Spring Boot</strong>, and <strong>MySQL</strong> — turning complex
+            business logic into elegant APIs.
+          </p>
+          <p class="reveal reveal-delay-2">
+            From <strong>payment gateway integrations</strong> with Razorpay to building
+            <strong>location-based search engines</strong>, I've worked on real-world features
+            that directly impact users. I take pride in writing maintainable code and designing
+            solid database schemas.
+          </p>
+          <div class="about-info-grid reveal reveal-delay-3">
+            <div class="info-item">
+              <div class="info-label">
+                <i class="fa-solid fa-envelope"></i> Email
+              </div>
+              <div class="info-val">kumaravel8248@gmail.com</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">
+                <i class="fa-solid fa-phone"></i> Phone
+              </div>
+              <div class="info-val">+91 82482 25846</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">
+                <i class="fa-solid fa-location-dot"></i> Location
+              </div>
+              <div class="info-val">Chennai, Poonamallee</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">
+                <i class="fa-solid fa-circle-dot"></i> Status
+              </div>
+              <div class="info-val" style="color:#16a34a;font-weight:600;">
+                <i class="fa-solid fa-circle" style="font-size:0.5rem;vertical-align:middle;"></i> Open to Work
+              </div>
             </div>
           </div>
-          <div class="col-lg-7">
-            <h2 class="section-heading">About Me</h2>
-            <p class="about-lead">
-              Backend Developer with 1 year of experience in developing RESTful
-              APIs and backend business logic. Hands‑on experience with Razorpay
-              payout integration, location‑based search (pincode/city + manual
-              fallback), and MySQL database & table design.
-            </p>
-            <div class="row mt-4">
-              <div class="col-6 col-md-4">
-                <div class="stat-item">
-                  <span class="stat-number">1+</span>
-                  <span class="stat-label">years exp</span>
-                </div>
-              </div>
-              <div class="col-6 col-md-4">
-                <div class="stat-item">
-                  <span class="stat-number">10+</span>
-                  <span class="stat-label">APIs built</span>
-                </div>
-              </div>
-              <div class="col-6 col-md-4">
-                <div class="stat-item">
-                  <span class="stat-number">100%</span>
-                  <span class="stat-label">Commitment</span>
-                </div>
-              </div>
-            </div>
-            <div class="about-tags mt-4">
-              <span class="tag">Node.js</span>
-              <span class="tag">Express</span>
-              <span class="tag">Java</span>
-              <span class="tag">Spring Boot</span>
-               <span class="tag">MySQL</span>
-            </div>
+          <div class="hero-btns reveal reveal-delay-4">
+            <a href="#contact" class="btn-primary">
+              <i class="fa-solid fa-paper-plane"></i> Let's Talk
+            </a>
+            <a href="https://github.com/kumaravevel/" class="btn-ghost" target="_blank">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ===== SKILLS ===== (ALL ICONS UPDATED TO REAL, SPECIFIC ONES) -->
-    <section id="skills" class="section-padding bg-light-skew">
-      <div class="container">
-        <div class="text-center">
-          <h2 class="section-heading center">Tech Stack & Expertise</h2>
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="skills-header">
+        <div>
+          <div class="section-tag reveal">Tech Stack</div>
+          <h2 class="section-title reveal reveal-delay-1">Skills &amp; Expertise</h2>
         </div>
-        <div class="row g-4 mt-3">
-          <!-- Node.js -->
-          <div class="col-md-3 col-6">
-            <div class="skill-glass">
-              <i class="devicon-nodejs-plain colored"></i>
-              <h5>Node.js</h5>
-              
-            </div>
-          </div>
-             <div class="col-md-3 col-6">
-            <div class="skill-glass">
-              <i class="devicon-express-original"></i>
-              <h5>Express</h5>
-              
-            </div>
-          </div>
-          <!-- Java -->
-          <div class="col-md-3 col-6">
-            <div class="skill-glass">
-              <i class="devicon-java-plain colored"></i>
-              <h5>Java</h5>
-              
-            </div>
-          </div>
-        
-          <!-- Spring Boot -->
-          <div class="col-md-3 col-6">
-            <div class="skill-glass">
-              <i class="devicon-spring-plain colored"></i>
-              <h5>Spring Boot</h5>
-             
-            </div>
-          </div>
-          <!-- MySQL -->
-          <div class="col-md-3 col-6">
-            <div class="skill-glass">
-              <i class="devicon-mysql-plain colored"></i>
-              <h5>MySQL</h5>
-              
-            </div>
-          </div>
-          <!-- REST APIs -->
-          <div class="col-md-3 col-6">
-            <div class="skill-glass">
-              <i class="devicon-postman-plain colored"></i>
-              <h5>REST APIs</h5>
-              
-            </div>
-          </div>
-          <!-- HTML (real icon) -->
-          <div class="col-md-3 col-6">
-            <div class="skill-glass">
-              <i class="devicon-html5-plain colored"></i>
-              <h5>HTML</h5>
-              
-            </div>
-          </div>
-          <!-- CSS (real icon) -->
-          <div class="col-md-3 col-6">
-            <div class="skill-glass">
-              <i class="devicon-css3-plain colored"></i>
-              <h5>CSS</h5>
-              
-            </div>
-          </div>
-          <!-- JavaScript (real icon) -->
-          <div class="col-md-3 col-6">
-            <div class="skill-glass">
-              <i class="devicon-javascript-plain colored"></i>
-              <h5>JavaScript</h5>
-              
-            </div>
-          </div>
-              <div class="col-md-3 col-6">
-            <div class="skill-glass">
-              <i class="devicon-react-original colored"></i>
-              <h5>React</h5>
-              
-            </div>
-          </div>
-          <!-- (optional) you can add more skills with real icons if needed -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== EXPERIENCE ===== -->
-    <section id="experience" class="section-padding">
-      <div class="container">
-        <h2 class="section-heading">Work Experience</h2>
-        <div class="exp-timeline">
-          <div class="exp-item">
-            <div class="exp-dot"></div>
-            <div class="exp-date">2025 – 2026</div>
-            <div class="exp-content">
-              <h3>Backend Developer (Node.js) @ Fayn Global</h3>
-              <ul>
-                <li>
-                  Built and maintained RESTful APIs for core business features.
-                </li>
-                <li>
-                  Implemented Razorpay payout integration, webhook handling, and
-                  transaction verification.
-                </li>
-                <li>
-                    Designed and implemented a secure withdrawal flow allowing users to withdraw funds directly to their bank accounts.
-                </li>
-                <li>
-                    Implemented OTP-based verification to confirm withdrawal requests and prevent unauthorized transactions.
-                </li>
-                <li>
-                  Designed MySQL schemas, tables, and stored procedures for
-                  efficient data processing.
-                </li>
-                <li>
-                  Developed search engine logic with auto‑location
-                  (pincode/city) + manual fallback.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== PROJECTS ===== (with new billing project) -->
-    <section id="projects" class="section-padding bg-light-skew">
-      <div class="container">
-        <h2 class="section-heading center">Featured Projects</h2>
-        <div class="row g-4 mt-3">
-          <!-- Fayn Global -->
-          <div class="col-md-6">
-            <div class="project-card-modern">
-              <div class="project-head">
-                <i class="bi bi-currency-exchange"></i>
-                <span class="project-year">Dec 2025 - Feb 2026</span>
-              </div>
-              <h3>Fayn Global · Node.js</h3>
-              <p>
-                Razorpay payout integration with webhook status handling · MySQL
-                stored procedures for payment & search workflows · Location
-                search engine (pincode/city + fallback).
-              </p>
-              <div class="tech-stack">
-                <span>Node.js</span><span>Express</span><span>MySQL</span
-                ><span>Razorpay</span>
-              </div>
-            </div>
-          </div>
-          <!-- Wedding Show -->
-          <div class="col-md-6">
-            <div class="project-card-modern">
-              <div class="project-head">
-                <i class="bi bi-gem"></i>
-                <span class="project-year">Sep 2025 - Nov 2025</span>
-              </div>
-              <h3>Welding Show E‑Commerce</h3>
-              <p>
-                Node.js backend + Next.js UI · MySQL schema for users, orders,
-                services · Real‑time messaging between users & providers · Order
-                & product management.
-              </p>
-              <div class="tech-stack">
-                <span>Node.js</span><span>Next.js</span><span>MySQL</span
-                ><span>WebSocket</span>
-              </div>
-            </div>
-          </div>
-          <!-- Optical Billing System (Java Spring, Next.js, MySQL, auto calculation) -->
-          <div class="col-md-6">
-            <div class="project-card-modern">
-              <div class="project-head">
-                <i class="bi bi-calculator"></i>
-                <span class="project-year">Jan 2025 - Mar 2025</span>
-              </div>
-              <h3>Optical Billing System</h3>
-              <p>
-                Real‑time billing system for optical store built with Java
-                Spring Boot and Next.js. Features automatic calculation of lens
-                prices, discounts, and taxes. MySQL database for inventory and
-                invoice management.
-              </p>
-              <div class="tech-stack">
-                <span>Java</span><span>Spring Boot</span><span>Next.js</span
-                ><span>MySQL</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CONTACT ===== -->
-    <section id="contact" class="section-padding">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            <h2 class="section-heading center">Let's Connect</h2>
-            <p class="contact-intro">
-              Available for backend opportunities · freelance · collaboration
-            </p>
-            <div class="contact-grid-modern">
-              <a href="tel:+918248225846" class="contact-card">
-                <i class="bi bi-telephone-outbound"></i>
-                <span>+91 82482 25846</span>
-              </a>
-              <a href="mailto:kumaravel8248@gmail.com" class="contact-card">
-                <i class="bi bi-envelope-paper"></i>
-                <span>kumaravel8248@gmail.com</span>
-              </a>
-              <a href="#" class="contact-card">
-                <i class="bi bi-pin-map"></i>
-                <span>Chennai, poonamallee</span>
-              </a>
-            </div>
-            <!-- social mini -->
-            <div class="social-links mt-5">
-              <a href="https://github.com/kumaravevel/"><i class="bi bi-github"></i></a>
-              <a href="https://www.linkedin.com/in/kumaravel-m-a5352730a/"><i class="bi bi-linkedin"></i></a>
-              <a href="#"><i class="bi bi-twitter-x"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer-modern">
-      <div class="container">
-        <p class="mb-0">
-          © 2026 Kumaravel M · backend developer · built with
-          <i class="bi bi-heart-fill"></i> · bootstrap + custom css
+        <p class="section-sub reveal reveal-delay-2">
+          Technologies I work with daily to build powerful backend systems.
         </p>
       </div>
-    </footer>
+      <div class="skills-grid">
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="skill-card reveal" >
+          <i class="devicon-nodejs-plain colored"></i>
+          <h5>Node.js</h5>
+          
+        </div>
+
+        <div class="skill-card reveal reveal-delay-1" style="--level:88%">
+          <i class="devicon-express-original"></i>
+          <h5>Express</h5>
+          
+        </div>
+
+        <div class="skill-card reveal reveal-delay-2" style="--level:85%">
+          <i class="devicon-java-plain colored"></i>
+          <h5>Java</h5>
+          
+        </div>
+
+        <div class="skill-card reveal reveal-delay-3" style="--level:80%">
+          <i class="devicon-spring-plain colored"></i>
+          <h5>Spring Boot</h5>
+          
+        </div>
+
+        <div class="skill-card reveal reveal-delay-4" style="--level:92%">
+          <i class="devicon-mysql-plain colored"></i>
+          <h5>MySQL</h5>
+          
+        </div>
+
+        <div class="skill-card reveal" style="--level:85%">
+          <i class="devicon-postman-plain colored"></i>
+          <h5>REST APIs</h5>
+          
+        </div>
+
+        <div class="skill-card reveal reveal-delay-1" style="--level:75%">
+          <i class="devicon-javascript-plain colored"></i>
+          <h5>JavaScript</h5>
+          
+        </div>
+
+        <div class="skill-card reveal reveal-delay-2" style="--level:70%">
+          <i class="devicon-react-original colored"></i>
+          <h5>React</h5>
+          
+        </div>
+
+        <div class="skill-card reveal reveal-delay-3" style="--level:72%">
+          <i class="devicon-html5-plain colored"></i>
+          <h5>HTML / CSS</h5>
+       
+        </div>
+
+        <div class="skill-card reveal reveal-delay-4" style="--level:68%">
+          <i class="devicon-git-plain colored"></i>
+          <h5>Git</h5>
     
-    <!-- Navbar auto-close on mobile when link clicked -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Get all nav links
-        const navLinks = document.querySelectorAll('.nav-link');
-        // Get the navbar collapse element
-        const navMenu = document.getElementById('navMenu');
-        // Get the Bootstrap collapse instance
-        const bsCollapse = new bootstrap.Collapse(navMenu, { toggle: false });
-        
-        // Add click event to each nav link
-        navLinks.forEach(link => {
-          link.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent default anchor jump temporarily
-            
-            // Get the target section id from href
-            const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            // Close the navbar collapse if it's open (mobile view)
-            if (navMenu.classList.contains('show')) {
-              bsCollapse.hide();
-            }
-            
-            // Smooth scroll to target after navbar closes
-            setTimeout(() => {
-              if (targetSection) {
-                targetSection.scrollIntoView({
-                  behavior: 'smooth',
-                  block: 'start'
-                });
-              }
-            }, 300); // Small delay to allow navbar collapse animation
-          });
-        });
-        
-        // Handle brand/logo click separately
-        document.querySelector('.navbar-brand').addEventListener('click', (e) => {
-          e.preventDefault();
-          
-          // Close navbar if open
-          if (navMenu.classList.contains('show')) {
-            bsCollapse.hide();
-          }
-          
-          // Scroll to top
-          setTimeout(() => {
-            window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            });
-          }, 300);
-        });
-      });
-    </script>
+        </div>
 
-    <!-- simple text rotator (very lightweight) -->
-    <script>
-      // typed effect for hero
-      var TxtRotate = function (el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = "";
-        this.tick();
-        this.isDeleting = false;
-      };
+      </div>
+    </div>
+  </section>
 
-      TxtRotate.prototype.tick = function () {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-tag reveal">Work History</div>
+      <h2 class="section-title reveal reveal-delay-1" style="margin-bottom:3rem">Experience</h2>
 
-        if (this.isDeleting) {
-          this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-          this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-date">
+            <i class="fa-regular fa-calendar"></i> 2025 — 2026
+          </div>
+          <div class="exp-card">
+            <h3>
+              <i class="fa-solid fa-code"></i> Backend Developer (Node.js)
+            </h3>
+            <div class="exp-company">
+              <i class="fa-solid fa-building"></i> Fayn Global
+            </div>
+            <ul class="exp-list">
+              <li>
+                Built and maintained <strong>RESTful APIs</strong> for core business features
+                powering the main product.
+              </li>
+              <li>
+                Implemented <strong>Razorpay payout integration</strong> with webhook handling,
+                transaction verification, and OTP-based withdrawal confirmation.
+              </li>
+              <li>
+                Designed a <strong>secure withdrawal flow</strong> allowing users to withdraw
+                funds directly to their bank accounts.
+              </li>
+              <li>
+                Engineered <strong>MySQL schemas, tables, and stored procedures</strong> for
+                efficient data processing and reporting.
+              </li>
+              <li>
+                Developed a <strong>location-based search engine</strong> with auto-detection
+                (pincode/city) and manual fallback logic.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-tag reveal">Portfolio</div>
+      <h2 class="section-title reveal reveal-delay-1" style="margin-bottom:3rem">Featured Projects</h2>
 
-        var that = this;
-        var delta = 200 - Math.random() * 100;
+      <div class="projects-grid">
 
-        if (this.isDeleting) {
-          delta /= 2;
-        }
+        <!-- Project 1 -->
+        <div class="project-card reveal">
+          <div class="project-number">01</div>
+          <div class="project-icon">
+            <i class="devicon-nodejs-plain colored"></i>
+          </div>
+          <h3>Fayn Global</h3>
+          <div class="project-period">
+            <i class="fa-regular fa-calendar-days"></i> Dec 2025 — Feb 2026
+          </div>
+          <p>
+            Razorpay payout integration with webhook status handling. MySQL stored procedures
+            for payment &amp; search workflows. Full location search engine with pincode/city
+            and fallback logic.
+          </p>
+          <div class="project-tags">
+            <span><i class="devicon-nodejs-plain"></i> Node.js</span>
+            <span><i class="devicon-express-original"></i> Express</span>
+            <span><i class="devicon-mysql-plain"></i> MySQL</span>
+            <span><i class="fa-solid fa-credit-card"></i> Razorpay</span>
+          </div>
+        </div>
 
-        if (!this.isDeleting && this.txt === fullTxt) {
-          delta = this.period;
-          this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === "") {
-          this.isDeleting = false;
-          this.loopNum++;
-          delta = 500;
-        }
+        <!-- Project 2 -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-number">02</div>
+          <div class="project-icon">
+            <i class="devicon-nextjs-plain"></i>
+          </div>
+          <h3>Wedding Show E-Commerce</h3>
+          <div class="project-period">
+            <i class="fa-regular fa-calendar-days"></i> Sep 2025 — Nov 2025
+          </div>
+          <p>
+            Full-stack e-commerce platform with Node.js backend and Next.js UI. Real-time
+            messaging between users and service providers. Complete order and product
+            management system.
+          </p>
+          <div class="project-tags">
+            <span><i class="devicon-nodejs-plain"></i> Node.js</span>
+            <span><i class="devicon-nextjs-plain"></i> Next.js</span>
+            <span><i class="devicon-mysql-plain"></i> MySQL</span>
+            <span><i class="fa-solid fa-bolt"></i> WebSocket</span>
+          </div>
+        </div>
 
-        setTimeout(function () {
-          that.tick();
-        }, delta);
-      };
+        <!-- Project 3 -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-number">03</div>
+          <div class="project-icon">
+            <i class="devicon-spring-plain colored"></i>
+          </div>
+          <h3>Optical Billing System</h3>
+          <div class="project-period">
+            <i class="fa-regular fa-calendar-days"></i> Jan 2025 — Mar 2025
+          </div>
+          <p>
+            Real-time billing system for optical stores with Java Spring Boot and Next.js.
+            Automatic calculation of lens prices, discounts, and taxes with full MySQL
+            inventory management.
+          </p>
+          <div class="project-tags">
+            <span><i class="devicon-java-plain"></i> Java</span>
+            <span><i class="devicon-spring-plain"></i> Spring Boot</span>
+            <span><i class="devicon-nextjs-plain"></i> Next.js</span>
+            <span><i class="devicon-mysql-plain"></i> MySQL</span>
+          </div>
+        </div>
 
-      window.onload = function () {
-        var elements = document.getElementsByClassName("txt-rotate");
-        for (var i = 0; i < elements.length; i++) {
-          var toRotate = elements[i].getAttribute("data-rotate");
-          var period = elements[i].getAttribute("data-period");
-          if (toRotate) {
-            new TxtRotate(elements[i], JSON.parse(toRotate), period);
-          }
-        }
-        // inject css for typed cursor
-        var style = document.createElement("style");
-        style.innerHTML = `.txt-rotate > .wrap { border-right: 0.08em solid #2563eb; padding-right: 4px; }`;
-        document.head.appendChild(style);
-      };
-    </script>
-  </body>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+
+        <div class="contact-info">
+          <div class="section-tag reveal">Get In Touch</div>
+          <h2 class="section-title reveal reveal-delay-1">Let's build<br>something great</h2>
+          <p class="reveal reveal-delay-2">
+            Available for backend developer roles, freelance projects, and collaborations.
+            I respond within 24 hours.
+          </p>
+
+          <div class="contact-items">
+            <a href="tel:+918248225846" class="contact-item reveal reveal-delay-2">
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="contact-item-text">
+                <strong>Phone</strong>
+                <span>+91 82482 25846</span>
+              </div>
+            </a>
+            <a href="mailto:kumaravel8248@gmail.com" class="contact-item reveal reveal-delay-3">
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-item-text">
+                <strong>Email</strong>
+                <span>kumaravel8248@gmail.com</span>
+              </div>
+            </a>
+            <a href="#" class="contact-item reveal reveal-delay-4">
+              <div class="contact-item-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-item-text">
+                <strong>Location</strong>
+                <span>Chennai, Poonamallee</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="socials reveal">
+            <a href="https://github.com/kumaraveel/" class="social-btn" target="_blank" title="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kumaravel-m-a5352730a/" class="social-btn" target="_blank" title="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:kumaravel8248@gmail.com" class="social-btn" title="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="tel:+918248225846" class="social-btn" title="Phone">
+              <i class="fa-solid fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-area reveal reveal-delay-2">
+          <div class="form-group">
+            <label>
+              <i class="fa-solid fa-user"></i> Your Name
+            </label>
+            <input type="text" class="form-control" placeholder="John Doe" />
+          </div>
+          <div class="form-group">
+            <label>
+              <i class="fa-solid fa-envelope"></i> Email Address
+            </label>
+            <input type="email" class="form-control" placeholder="john@company.com" />
+          </div>
+          <div class="form-group">
+            <label>
+              <i class="fa-solid fa-tag"></i> Subject
+            </label>
+            <input type="text" class="form-control" placeholder="Job Opportunity / Project" />
+          </div>
+          <div class="form-group">
+            <label>
+              <i class="fa-solid fa-comment-dots"></i> Message
+            </label>
+            <textarea class="form-control" rows="5" placeholder="Tell me about the opportunity..."></textarea>
+          </div>
+          <button class="btn-submit" onclick="handleSubmit(this)">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      <i class="fa-solid fa-code"></i>
+      &copy; 2026 <span>Kumaravel M</span>
+      &middot; Backend Developer &middot;
+      Built with <i class="fa-solid fa-heart" style="color:#e11d48;font-size:0.8em;"></i> in Chennai
+    </p>
+  </footer>
+
+  <script>
+    // ── Custom Cursor ──────────────────────────────────────
+    const dot  = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mx=0, my=0, rx=0, ry=0;
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      if (dot) { dot.style.left = mx+'px'; dot.style.top = my+'px'; }
+    });
+    (function animRing(){
+      rx += (mx-rx)*0.1; ry += (my-ry)*0.1;
+      if (ring) { ring.style.left = rx+'px'; ring.style.top = ry+'px'; }
+      requestAnimationFrame(animRing);
+    })();
+
+    // ── Typing Animation ───────────────────────────────────
+    const phrases = ['RESTful APIs.','Scalable Backends.','MySQL Databases.','Payment Systems.','Location Search.'];
+    let p=0, c=0, del=false;
+    const te = document.getElementById('typed');
+    function typeLoop(){
+      if (!te) return;
+      const cur = phrases[p];
+      if (!del) {
+        te.textContent = cur.slice(0, ++c);
+        if (c === cur.length) { del = true; setTimeout(typeLoop, 2000); return; }
+      } else {
+        te.textContent = cur.slice(0, --c);
+        if (c === 0) { del = false; p = (p+1) % phrases.length; setTimeout(typeLoop, 400); return; }
+      }
+      setTimeout(typeLoop, del ? 60 : 100);
+    }
+    typeLoop();
+
+    // ── Scroll Reveal ──────────────────────────────────────
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal, .skill-card').forEach(el => observer.observe(el));
+
+    // ── Navbar Shrink ──────────────────────────────────────
+    window.addEventListener('scroll', () => {
+      document.querySelector('.navbar').style.padding = window.scrollY > 50 ? '10px 0' : '16px 0';
+    });
+
+    // ── Mobile Nav ─────────────────────────────────────────
+    function closeMobile(t) {
+      document.getElementById('mobileNav').classList.remove('open');
+      if (t) setTimeout(() => {
+        const el = document.querySelector(t);
+        if (el) el.scrollIntoView({ behavior:'smooth' });
+      }, 200);
+    }
+
+    // ── Contact Form ───────────────────────────────────────
+    function handleSubmit(btn) {
+      btn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Message Sent!';
+      btn.style.background = '#16a34a';
+      btn.style.color = '#fff';
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+        btn.style.background = '';
+        btn.style.color = '';
+      }, 2500);
+    }
+  </script>
+
+</body>
 </html>
