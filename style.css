@@ -58,6 +58,11 @@ body {
   transform: translate(-50%, -50%);
   transition: transform 0.1s;
 }
+.cursor-ring.ring-hover {
+  width: 52px;
+  height: 52px;
+  border-color: var(--black);
+}
 .cursor-ring {
   position: fixed;
   width: 36px;
@@ -1056,6 +1061,7 @@ section {
   transition: opacity 0.3s;
   z-index: 0;
   border-radius: var(--radius-lg);
+  pointer-events: none;   /* ← idha add pannunga */
 }
 .project-card:hover {
   transform: translateY(-10px);
@@ -1378,4 +1384,45 @@ img { max-width: 100%; height: auto; }
   .hero-stats > div { align-items: center; }
   .project-tags span { font-size: 0.67rem; padding: 3px 8px; }
   .float-badge { display: none; }
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--accent, #6366f1);
+  text-decoration: none;
+  margin: 4px 0 12px;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin: 8px 0 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(99, 102, 241, 0.4);
+}
+
+.project-link i {
+  font-size: 0.75rem;
+}
+.project-link {
+  position: relative;
+  z-index: 2;
 }

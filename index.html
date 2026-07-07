@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Kumaravel M · Backend Developer</title>
@@ -13,8 +14,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
 </head>
+
 <body>
 
   <!-- Custom Cursor -->
@@ -26,22 +30,22 @@
     <button class="mobile-close" onclick="closeMobile()">
       <i class="fa-solid fa-xmark"></i>
     </button>
-    <a href="#home"       onclick="closeMobile('#home')">
+    <a href="#home" onclick="closeMobile('#home')">
       <i class="fa-solid fa-house"></i> Home
     </a>
-    <a href="#about"      onclick="closeMobile('#about')">
+    <a href="#about" onclick="closeMobile('#about')">
       <i class="fa-solid fa-user"></i> About
     </a>
-    <a href="#skills"     onclick="closeMobile('#skills')">
+    <a href="#skills" onclick="closeMobile('#skills')">
       <i class="fa-solid fa-layer-group"></i> Skills
     </a>
     <a href="#experience" onclick="closeMobile('#experience')">
       <i class="fa-solid fa-briefcase"></i> Experience
     </a>
-    <a href="#projects"   onclick="closeMobile('#projects')">
+    <a href="#projects" onclick="closeMobile('#projects')">
       <i class="fa-solid fa-diagram-project"></i> Projects
     </a>
-    <a href="#contact"    onclick="closeMobile('#contact')">
+    <a href="#contact" onclick="closeMobile('#contact')">
       <i class="fa-solid fa-envelope"></i> Contact
     </a>
   </div>
@@ -57,8 +61,8 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact" class="nav-cta">
-          <i class="fa-solid fa-handshake"></i> Hire Me
-        </a></li>
+            <i class="fa-solid fa-handshake"></i> Hire Me
+          </a></li>
       </ul>
       <button class="hamburger" onclick="document.getElementById('mobileNav').classList.add('open')">
         <span></span><span></span><span></span>
@@ -106,7 +110,7 @@
             <span class="stat-lbl">APIs Built</span>
           </div>
           <div>
-            <span class="stat-val">3</span>
+            <span class="stat-val">5</span>
             <span class="stat-lbl">Projects</span>
           </div>
         </div>
@@ -239,64 +243,64 @@
       </div>
       <div class="skills-grid">
 
-        <div class="skill-card reveal" >
+        <div class="skill-card reveal">
           <i class="devicon-nodejs-plain colored"></i>
           <h5>Node.js</h5>
-          
+
         </div>
 
         <div class="skill-card reveal reveal-delay-1" style="--level:88%">
           <i class="devicon-express-original"></i>
           <h5>Express</h5>
-          
+
         </div>
 
         <div class="skill-card reveal reveal-delay-2" style="--level:85%">
           <i class="devicon-java-plain colored"></i>
           <h5>Java</h5>
-          
+
         </div>
 
         <div class="skill-card reveal reveal-delay-3" style="--level:80%">
           <i class="devicon-spring-plain colored"></i>
           <h5>Spring Boot</h5>
-          
+
         </div>
 
         <div class="skill-card reveal reveal-delay-4" style="--level:92%">
           <i class="devicon-mysql-plain colored"></i>
           <h5>MySQL</h5>
-          
+
         </div>
 
         <div class="skill-card reveal" style="--level:85%">
           <i class="devicon-postman-plain colored"></i>
           <h5>REST APIs</h5>
-          
+
         </div>
 
         <div class="skill-card reveal reveal-delay-1" style="--level:75%">
           <i class="devicon-javascript-plain colored"></i>
           <h5>JavaScript</h5>
-          
+
         </div>
 
         <div class="skill-card reveal reveal-delay-2" style="--level:70%">
           <i class="devicon-react-original colored"></i>
           <h5>React</h5>
-          
+
         </div>
 
         <div class="skill-card reveal reveal-delay-3" style="--level:72%">
           <i class="devicon-html5-plain colored"></i>
           <h5>HTML / CSS</h5>
-       
+
         </div>
 
         <div class="skill-card reveal reveal-delay-4" style="--level:68%">
           <i class="devicon-git-plain colored"></i>
           <h5>Git</h5>
-    
+
         </div>
 
       </div>
@@ -357,9 +361,66 @@
 
       <div class="projects-grid">
 
-        <!-- Project 1 -->
+
         <div class="project-card reveal">
           <div class="project-number">01</div>
+          <div class="project-icon">
+            <i class="devicon-nodejs-plain colored"></i>
+          </div>
+          <h3>
+            <a href="https://hrms.glets.in/" target="_blank" rel="noopener noreferrer">
+              GLETS HRMS <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i>
+            </a>
+          </h3>
+          <div class="project-period">
+            <i class="fa-regular fa-calendar-days"></i> 2025 — 2026
+          </div>
+          <p>
+            Face recognition-based HRMS with role-based admin and employee portals. Admin can
+            onboard employees, auto-generate default credentials, and view attendance &amp;
+            reports in real time. Employees log in with a default password, are prompted to
+            reset it on first login, then mark attendance via face verification (Face-api.js)
+            with automatic geolocation capture for each check-in.
+          </p>
+          <div class="project-tags">
+            <span><i class="devicon-nodejs-plain"></i> Node.js</span>
+            <span><i class="devicon-express-original"></i> Express</span>
+            <span><i class="devicon-mysql-plain"></i> MySQL</span>
+            <span><i class="devicon-nextjs-plain"></i> Next.js</span>
+            <span><i class="fa-solid fa-face-smile"></i> Face-api.js</span>
+            <span><i class="fa-solid fa-location-dot"></i> Geolocation</span>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-number">02</div>
+          <div class="project-icon">
+            <i class="devicon-javascript-plain colored"></i>
+          </div>
+          <h3>
+            <a href="https://www.bodhigroupschennai.in/" target="_blank" rel="noopener noreferrer">
+              Bodhi Group Chennai <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i>
+            </a>
+          </h3>
+          <div class="project-period">
+            <i class="fa-regular fa-calendar-days"></i> 2025 — 2026
+          </div>
+          <p>
+            Institute website showcasing courses, faculty, and campus details, built with
+            plain HTML, CSS &amp; JS. Integrated an admission enquiry form using EmailJS —
+            on submit, applicant details are instantly emailed without a backend server,
+            with client-side validation and a confirmation message on success.
+          </p>
+          <div class="project-tags">
+            <span><i class="devicon-html5-plain colored"></i> HTML5</span>
+            <span><i class="devicon-css3-plain colored"></i> CSS3</span>
+            <span><i class="devicon-javascript-plain"></i> JavaScript</span>
+            <span><i class="fa-solid fa-envelope"></i> EmailJS</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal">
+          <div class="project-number">03</div>
           <div class="project-icon">
             <i class="devicon-nodejs-plain colored"></i>
           </div>
@@ -380,9 +441,9 @@
           </div>
         </div>
 
-        <!-- Project 2 -->
+        <!-- Project 4 -->
         <div class="project-card reveal reveal-delay-1">
-          <div class="project-number">02</div>
+          <div class="project-number">04</div>
           <div class="project-icon">
             <i class="devicon-nextjs-plain"></i>
           </div>
@@ -403,9 +464,9 @@
           </div>
         </div>
 
-        <!-- Project 3 -->
+        <!-- Project 5 -->
         <div class="project-card reveal reveal-delay-2">
-          <div class="project-number">03</div>
+          <div class="project-number">05</div>
           <div class="project-icon">
             <i class="devicon-spring-plain colored"></i>
           </div>
@@ -474,10 +535,11 @@
           </div>
 
           <div class="socials reveal">
-            <a href="https://github.com/kumaraveel/" class="social-btn" target="_blank" title="GitHub">
+            <a href="https://github.com/kumaravevel/" class="social-btn" target="_blank" title="GitHub">
               <i class="fa-brands fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/kumaravel-m-a5352730a/" class="social-btn" target="_blank" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/kumaravel-m-a5352730a/" class="social-btn" target="_blank"
+              title="LinkedIn">
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
             <a href="mailto:kumaravel8248@gmail.com" class="social-btn" title="Email">
@@ -490,33 +552,40 @@
         </div>
 
         <div class="contact-form-area reveal reveal-delay-2">
+
           <div class="form-group">
             <label>
               <i class="fa-solid fa-user"></i> Your Name
             </label>
-            <input type="text" class="form-control" placeholder="John Doe" />
+            <input type="text" id="name" class="form-control" placeholder="John Doe" />
           </div>
+
           <div class="form-group">
             <label>
               <i class="fa-solid fa-envelope"></i> Email Address
             </label>
-            <input type="email" class="form-control" placeholder="john@company.com" />
+            <input type="email" id="email" class="form-control" placeholder="john@company.com" />
           </div>
+
           <div class="form-group">
             <label>
               <i class="fa-solid fa-tag"></i> Subject
             </label>
-            <input type="text" class="form-control" placeholder="Job Opportunity / Project" />
+            <input type="text" id="subject" class="form-control" placeholder="Job Opportunity / Project" />
           </div>
+
           <div class="form-group">
             <label>
               <i class="fa-solid fa-comment-dots"></i> Message
             </label>
-            <textarea class="form-control" rows="5" placeholder="Tell me about the opportunity..."></textarea>
+            <textarea id="message" class="form-control" rows="5"
+              placeholder="Tell me about the opportunity..."></textarea>
           </div>
-          <button class="btn-submit" onclick="handleSubmit(this)">
+
+          <button class="btn-submit" onclick="sendWhatsApp()">
             <i class="fa-solid fa-paper-plane"></i> Send Message
           </button>
+
         </div>
 
       </div>
@@ -534,25 +603,32 @@
   </footer>
 
   <script>
+
     // ── Custom Cursor ──────────────────────────────────────
-    const dot  = document.getElementById('cursorDot');
+    const dot = document.getElementById('cursorDot');
     const ring = document.getElementById('cursorRing');
-    let mx=0, my=0, rx=0, ry=0;
+    let mx = 0, my = 0, rx = 0, ry = 0;
     document.addEventListener('mousemove', e => {
       mx = e.clientX; my = e.clientY;
-      if (dot) { dot.style.left = mx+'px'; dot.style.top = my+'px'; }
+      if (dot) { dot.style.left = mx + 'px'; dot.style.top = my + 'px'; }
     });
-    (function animRing(){
-      rx += (mx-rx)*0.1; ry += (my-ry)*0.1;
-      if (ring) { ring.style.left = rx+'px'; ring.style.top = ry+'px'; }
+    (function animRing() {
+      rx += (mx - rx) * 0.1; ry += (my - ry) * 0.1;
+      if (ring) { ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; }
       requestAnimationFrame(animRing);
     })();
 
-    // ── Typing Animation ───────────────────────────────────
-    const phrases = ['RESTful APIs.','Scalable Backends.','MySQL Databases.','Payment Systems.','Location Search.'];
-    let p=0, c=0, del=false;
+    // ── Cursor hover-grow on links/buttons ─────────────────
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => ring && ring.classList.add('ring-hover'));
+      el.addEventListener('mouseleave', () => ring && ring.classList.remove('ring-hover'));
+    });
+
+
+    const phrases = ['RESTful APIs.', 'Scalable Backends.', 'MySQL Databases.', 'Payment Systems.', 'Location Search.'];
+    let p = 0, c = 0, del = false;
     const te = document.getElementById('typed');
-    function typeLoop(){
+    function typeLoop() {
       if (!te) return;
       const cur = phrases[p];
       if (!del) {
@@ -560,7 +636,7 @@
         if (c === cur.length) { del = true; setTimeout(typeLoop, 2000); return; }
       } else {
         te.textContent = cur.slice(0, --c);
-        if (c === 0) { del = false; p = (p+1) % phrases.length; setTimeout(typeLoop, 400); return; }
+        if (c === 0) { del = false; p = (p + 1) % phrases.length; setTimeout(typeLoop, 400); return; }
       }
       setTimeout(typeLoop, del ? 60 : 100);
     }
@@ -582,7 +658,7 @@
       document.getElementById('mobileNav').classList.remove('open');
       if (t) setTimeout(() => {
         const el = document.querySelector(t);
-        if (el) el.scrollIntoView({ behavior:'smooth' });
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
       }, 200);
     }
 
@@ -597,7 +673,39 @@
         btn.style.color = '';
       }, 2500);
     }
+
+
+    function sendWhatsApp() {
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const subject = document.getElementById("subject").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !email || !subject || !message) {
+        alert("Please fill all fields.");
+        return;
+      }
+
+      const phone = "918248225846";
+
+      const text =
+        `*New Portfolio Contact*
+
+      👤 Name: ${name}
+      📧 Email: ${email}
+      📌 Subject: ${subject}
+
+      💬 Message:
+      ${message}`;
+
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+      window.open(url, "_blank");
+    }
+
   </script>
 
 </body>
+
 </html>
