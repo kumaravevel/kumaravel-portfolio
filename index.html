@@ -1,696 +1,873 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kumaravel M · Backend Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Kumaravel M · Backend Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css">
+    <!-- Devicons — real colored tech icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
 
-  <!-- Devicons — real colored tech icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <!-- Font Awesome 6 — all UI icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
-  <!-- Font Awesome 6 — all UI icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap"
-    rel="stylesheet" />
-</head>
+  <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
 
-<body>
-
-  <!-- Custom Cursor -->
-  <div class="cursor-dot" id="cursorDot"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
-  <!-- Mobile Nav -->
-  <div class="mobile-nav" id="mobileNav">
-    <button class="mobile-close" onclick="closeMobile()">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-    <a href="#home" onclick="closeMobile('#home')">
-      <i class="fa-solid fa-house"></i> Home
-    </a>
-    <a href="#about" onclick="closeMobile('#about')">
-      <i class="fa-solid fa-user"></i> About
-    </a>
-    <a href="#skills" onclick="closeMobile('#skills')">
-      <i class="fa-solid fa-layer-group"></i> Skills
-    </a>
-    <a href="#experience" onclick="closeMobile('#experience')">
-      <i class="fa-solid fa-briefcase"></i> Experience
-    </a>
-    <a href="#projects" onclick="closeMobile('#projects')">
-      <i class="fa-solid fa-diagram-project"></i> Projects
-    </a>
-    <a href="#contact" onclick="closeMobile('#contact')">
-      <i class="fa-solid fa-envelope"></i> Contact
-    </a>
-  </div>
-
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a class="nav-logo" href="#home">M<span>.</span>Kumaravel</a>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact" class="nav-cta">
-            <i class="fa-solid fa-handshake"></i> Hire Me
-          </a></li>
-      </ul>
-      <button class="hamburger" onclick="document.getElementById('mobileNav').classList.add('open')">
-        <span></span><span></span><span></span>
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+      <button class="mobile-close" onclick="closeMobile()">
+        <i class="fa-solid fa-xmark"></i>
       </button>
+      <a href="#home" onclick="closeMobile('#home')">
+        <i class="fa-solid fa-house"></i> Home
+      </a>
+      <a href="#about" onclick="closeMobile('#about')">
+        <i class="fa-solid fa-user"></i> About
+      </a>
+      <a href="#skills" onclick="closeMobile('#skills')">
+        <i class="fa-solid fa-layer-group"></i> Skills
+      </a>
+      <a href="#experience" onclick="closeMobile('#experience')">
+        <i class="fa-solid fa-briefcase"></i> Experience
+      </a>
+      <a href="#projects" onclick="closeMobile('#projects')">
+        <i class="fa-solid fa-diagram-project"></i> Projects
+      </a>
+      <a href="#contact" onclick="closeMobile('#contact')">
+        <i class="fa-solid fa-envelope"></i> Contact
+      </a>
     </div>
-  </nav>
 
-  <!-- HERO -->
-  <section id="home">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="hero-container">
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a class="nav-logo" href="#home">M<span>.</span>Kumaravel</a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li>
+            <a href="#contact" class="nav-cta">
+              <i class="fa-solid fa-handshake"></i> Hire Me
+            </a>
+          </li>
+        </ul>
+        <button
+          class="hamburger"
+          onclick="document.getElementById('mobileNav').classList.add('open')"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
 
-      <div class="hero-content">
-        <div class="hero-eyebrow">
-          <i class="fa-solid fa-terminal"></i> Backend Developer
-        </div>
-        <h1 class="hero-name">Kumaravel</h1>
-        <p class="hero-role">I Build <span class="typed-text" id="typed"></span></p>
-        <p class="hero-desc">
-          Backend developer with <strong>1+ year</strong> of experience crafting RESTful APIs,
-          payment integrations, and scalable database systems. Currently based in
-          <strong>Chennai</strong>, open for opportunities.
-        </p>
-        <div class="hero-btns">
-          <a href="#contact" class="btn-primary">
-            <i class="fa-solid fa-rocket"></i> Hire Me
-          </a>
-          <a href="#projects" class="btn-ghost">
-            View Projects <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-        <div class="available-badge">
-          <div class="available-dot"></div>
-          <strong>Available</strong> for new opportunities
-        </div>
-        <div class="hero-stats">
-          <div>
-            <span class="stat-val">1<span>+</span></span>
-            <span class="stat-lbl">Years Exp</span>
+    <!-- HERO -->
+    <section id="home">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <i class="fa-solid fa-terminal"></i> Backend Developer
           </div>
-          <div>
-            <span class="stat-val">100<span>+</span></span>
-            <span class="stat-lbl">APIs Built</span>
+          <h1 class="hero-name">Kumaravel</h1>
+          <p class="hero-role">
+            I Build <span class="typed-text" id="typed"></span>
+          </p>
+          <p class="hero-desc">
+            Passionate <strong>Full Stack Developer</strong> with
+            <strong>2+ years of experience</strong>
+            building scalable, high-performance web applications and robust
+            backend systems. Skilled in developing seamless user experiences,
+            RESTful APIs, database solutions, and secure, reliable applications
+            using modern technologies. Based in
+            <strong>Chennai</strong> and open to exciting opportunities to build
+            impactful products and grow with innovative teams.
+          </p>
+
+          <div class="hero-btns">
+            <a href="#contact" class="btn-primary">
+              <i class="fa-solid fa-rocket"></i> Hire Me
+            </a>
+            <a href="#projects" class="btn-ghost">
+              View Projects <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
-          <div>
-            <span class="stat-val">5</span>
-            <span class="stat-lbl">Projects</span>
+          <div class="available-badge">
+            <div class="available-dot"></div>
+            <strong>Available</strong> for new opportunities
+          </div>
+          <div class="hero-stats">
+            <div>
+              <span class="stat-val">2<span>+</span></span>
+              <span class="stat-lbl">Years Exp</span>
+            </div>
+            <div>
+              <span class="stat-val">100<span>+</span></span>
+              <span class="stat-lbl">APIs Built</span>
+            </div>
+            <div>
+              <span class="stat-val">5</span>
+              <span class="stat-lbl">Projects</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="profile-ring">
+            <img src="images/profile.jpg" alt="Kumaravel" class="profile-img" />
+          </div>
+
+          <div class="float-badge fb-1">
+            <i class="devicon-nodejs-plain colored"></i> Node.js
+          </div>
+
+          <div class="float-badge fb-2">
+            <i class="devicon-mysql-plain colored"></i> MySQL
+          </div>
+
+          <div class="float-badge fb-3">
+            <i class="devicon-java-plain colored"></i> Java
+          </div>
+
+          <div class="float-badge fb-4">
+            <i class="devicon-spring-plain colored"></i> Spring Boot
+          </div>
+
+          <div class="float-badge fb-5">
+            <i class="devicon-react-original colored"></i> React
+          </div>
+
+          <div class="float-badge fb-6">
+            <i class="devicon-nextjs-plain"></i> Next.js
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="hero-visual">
-        <div class="profile-ring">
-          <img src="images/profile.jpg" alt="Kumaravel" class="profile-img" />
-        </div>
-        <div class="float-badge fb-1">
+    <!-- MARQUEE -->
+    <div class="marquee-section">
+      <div class="marquee-track">
+        <div class="marquee-item">
           <i class="devicon-nodejs-plain colored"></i> Node.js
         </div>
-        <div class="float-badge fb-2">
-          <i class="devicon-mysql-plain colored"></i> MySQL
+        <div class="marquee-item">
+          <i class="devicon-express-original"></i> Express
         </div>
-        <div class="float-badge fb-3">
+        <div class="marquee-item">
           <i class="devicon-java-plain colored"></i> Java
         </div>
-        <div class="float-badge fb-4">
+        <div class="marquee-item">
           <i class="devicon-spring-plain colored"></i> Spring Boot
         </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- MARQUEE -->
-  <div class="marquee-section">
-    <div class="marquee-track">
-      <div class="marquee-item"><i class="devicon-nodejs-plain colored"></i> Node.js</div>
-      <div class="marquee-item"><i class="devicon-express-original"></i> Express</div>
-      <div class="marquee-item"><i class="devicon-java-plain colored"></i> Java</div>
-      <div class="marquee-item"><i class="devicon-spring-plain colored"></i> Spring Boot</div>
-      <div class="marquee-item"><i class="devicon-mysql-plain colored"></i> MySQL</div>
-      <div class="marquee-item"><i class="devicon-postman-plain colored"></i> REST APIs</div>
-      <div class="marquee-item"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
-      <div class="marquee-item"><i class="fa-solid fa-bolt"></i> WebSockets</div>
-      <div class="marquee-item"><i class="devicon-react-original colored"></i> React</div>
-      <div class="marquee-item"><i class="devicon-nextjs-plain"></i> Next.js</div>
-      <div class="marquee-item"><i class="devicon-git-plain colored"></i> Git</div>
-      <!-- duplicate for seamless loop -->
-      <div class="marquee-item"><i class="devicon-nodejs-plain colored"></i> Node.js</div>
-      <div class="marquee-item"><i class="devicon-express-original"></i> Express</div>
-      <div class="marquee-item"><i class="devicon-java-plain colored"></i> Java</div>
-      <div class="marquee-item"><i class="devicon-spring-plain colored"></i> Spring Boot</div>
-      <div class="marquee-item"><i class="devicon-mysql-plain colored"></i> MySQL</div>
-      <div class="marquee-item"><i class="devicon-postman-plain colored"></i> REST APIs</div>
-      <div class="marquee-item"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
-      <div class="marquee-item"><i class="fa-solid fa-bolt"></i> WebSockets</div>
-      <div class="marquee-item"><i class="devicon-react-original colored"></i> React</div>
-      <div class="marquee-item"><i class="devicon-nextjs-plain"></i> Next.js</div>
-      <div class="marquee-item"><i class="devicon-git-plain colored"></i> Git</div>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-img-wrap reveal">
-          <img src="images/profile.jpg" alt="Kumaravel Muaravel" />
+        <div class="marquee-item">
+          <i class="devicon-mysql-plain colored"></i> MySQL
         </div>
-        <div class="about-text">
-          <div class="section-tag reveal">About Me</div>
-          <h2 class="section-title reveal reveal-delay-1">Building the web<br>from the backend</h2>
-          <p class="reveal reveal-delay-2">
-            I'm a <strong>Backend Developer</strong> with a passion for building clean, efficient
-            server-side systems. I specialize in <strong>Node.js</strong>,
-            <strong>Java Spring Boot</strong>, and <strong>MySQL</strong> — turning complex
-            business logic into elegant APIs.
+        <div class="marquee-item">
+          <i class="devicon-postman-plain colored"></i> REST APIs
+        </div>
+        <div class="marquee-item">
+          <i class="devicon-javascript-plain colored"></i> JavaScript
+        </div>
+        <div class="marquee-item">
+          <i class="fa-solid fa-bolt"></i> WebSockets
+        </div>
+        <div class="marquee-item">
+          <i class="devicon-react-original colored"></i> React
+        </div>
+        <div class="marquee-item">
+          <i class="devicon-nextjs-plain"></i> Next.js
+        </div>
+        <div class="marquee-item">
+          <i class="devicon-git-plain colored"></i> Git
+        </div>
+        <!-- duplicate for seamless loop -->
+        <div class="marquee-item">
+          <i class="devicon-nodejs-plain colored"></i> Node.js
+        </div>
+        <div class="marquee-item">
+          <i class="devicon-express-original"></i> Express
+        </div>
+        <div class="marquee-item">
+          <i class="devicon-java-plain colored"></i> Java
+        </div>
+        <div class="marquee-item">
+          <i class="devicon-spring-plain colored"></i> Spring Boot
+        </div>
+        <div class="marquee-item">
+          <i class="devicon-mysql-plain colored"></i> MySQL
+        </div>
+        <div class="marquee-item">
+          <i class="devicon-postman-plain colored"></i> REST APIs
+        </div>
+        <div class="marquee-item">
+          <i class="devicon-javascript-plain colored"></i> JavaScript
+        </div>
+        <div class="marquee-item">
+          <i class="fa-solid fa-bolt"></i> WebSockets
+        </div>
+        <div class="marquee-item">
+          <i class="devicon-react-original colored"></i> React
+        </div>
+        <div class="marquee-item">
+          <i class="devicon-nextjs-plain"></i> Next.js
+        </div>
+        <div class="marquee-item">
+          <i class="devicon-git-plain colored"></i> Git
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-img-wrap reveal">
+            <img src="images/profile.jpg" alt="Kumaravel Muaravel" />
+          </div>
+          <div class="about-text">
+            <div class="section-tag reveal">About Me</div>
+            <h2 class="section-title reveal reveal-delay-1">
+              Building the web<br />from the backend
+            </h2>
+            <p class="reveal reveal-delay-2">
+              I'm a <strong>Backend Developer</strong> with a passion for
+              building clean, efficient server-side systems. I specialize in
+              <strong>Node.js</strong>, <strong>Java Spring Boot</strong>, and
+              <strong>MySQL</strong> — turning complex business logic into
+              elegant APIs.
+            </p>
+            <p class="reveal reveal-delay-2">
+              From <strong>payment gateway integrations</strong> with Razorpay
+              to building <strong>location-based search engines</strong>, I've
+              worked on real-world features that directly impact users. I take
+              pride in writing maintainable code and designing solid database
+              schemas.
+            </p>
+            <div class="about-info-grid reveal reveal-delay-3">
+              <div class="info-item">
+                <div class="info-label">
+                  <i class="fa-solid fa-envelope"></i> Email
+                </div>
+                <div class="info-val">kumaravel8248@gmail.com</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label">
+                  <i class="fa-solid fa-phone"></i> Phone
+                </div>
+                <div class="info-val">+91 82482 25846</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label">
+                  <i class="fa-solid fa-location-dot"></i> Location
+                </div>
+                <div class="info-val">Chennai, Poonamallee</div>
+              </div>
+              <div class="info-item">
+                <div class="info-label">
+                  <i class="fa-solid fa-circle-dot"></i> Status
+                </div>
+                <div class="info-val" style="color: #16a34a; font-weight: 600">
+                  <i
+                    class="fa-solid fa-circle"
+                    style="font-size: 0.5rem; vertical-align: middle"
+                  ></i>
+                  Open to Work
+                </div>
+              </div>
+            </div>
+            <div class="hero-btns reveal reveal-delay-4">
+              <a href="#contact" class="btn-primary">
+                <i class="fa-solid fa-paper-plane"></i> Let's Talk
+              </a>
+              <a
+                href="https://github.com/kumaravevel/"
+                class="btn-ghost"
+                target="_blank"
+              >
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <canvas id="lightningBg" class="lightning-container"></canvas>
+      <div id="gridscanBg" class="gridscan"></div>
+      <div class="container">
+        <div class="skills-header">
+          <div>
+            <div class="section-tag reveal">Tech Stack</div>
+            <h2 class="section-title reveal reveal-delay-1">
+              Skills &amp; Expertise
+            </h2>
+          </div>
+          <p class="section-sub reveal reveal-delay-2">
+            Technologies I work with daily to build powerful backend systems.
           </p>
-          <p class="reveal reveal-delay-2">
-            From <strong>payment gateway integrations</strong> with Razorpay to building
-            <strong>location-based search engines</strong>, I've worked on real-world features
-            that directly impact users. I take pride in writing maintainable code and designing
-            solid database schemas.
-          </p>
-          <div class="about-info-grid reveal reveal-delay-3">
-            <div class="info-item">
-              <div class="info-label">
-                <i class="fa-solid fa-envelope"></i> Email
-              </div>
-              <div class="info-val">kumaravel8248@gmail.com</div>
-            </div>
-            <div class="info-item">
-              <div class="info-label">
-                <i class="fa-solid fa-phone"></i> Phone
-              </div>
-              <div class="info-val">+91 82482 25846</div>
-            </div>
-            <div class="info-item">
-              <div class="info-label">
-                <i class="fa-solid fa-location-dot"></i> Location
-              </div>
-              <div class="info-val">Chennai, Poonamallee</div>
-            </div>
-            <div class="info-item">
-              <div class="info-label">
-                <i class="fa-solid fa-circle-dot"></i> Status
-              </div>
-              <div class="info-val" style="color:#16a34a;font-weight:600;">
-                <i class="fa-solid fa-circle" style="font-size:0.5rem;vertical-align:middle;"></i> Open to Work
-              </div>
-            </div>
-          </div>
-          <div class="hero-btns reveal reveal-delay-4">
-            <a href="#contact" class="btn-primary">
-              <i class="fa-solid fa-paper-plane"></i> Let's Talk
-            </a>
-            <a href="https://github.com/kumaravevel/" class="btn-ghost" target="_blank">
-              <i class="fa-brands fa-github"></i> GitHub
-            </a>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container">
-      <div class="skills-header">
-        <div>
-          <div class="section-tag reveal">Tech Stack</div>
-          <h2 class="section-title reveal reveal-delay-1">Skills &amp; Expertise</h2>
-        </div>
-        <p class="section-sub reveal reveal-delay-2">
-          Technologies I work with daily to build powerful backend systems.
-        </p>
-      </div>
-      <div class="skills-grid">
-
-        <div class="skill-card reveal">
-          <i class="devicon-nodejs-plain colored"></i>
-          <h5>Node.js</h5>
-
-        </div>
-
-        <div class="skill-card reveal reveal-delay-1" style="--level:88%">
-          <i class="devicon-express-original"></i>
-          <h5>Express</h5>
-
-        </div>
-
-        <div class="skill-card reveal reveal-delay-2" style="--level:85%">
-          <i class="devicon-java-plain colored"></i>
-          <h5>Java</h5>
-
-        </div>
-
-        <div class="skill-card reveal reveal-delay-3" style="--level:80%">
-          <i class="devicon-spring-plain colored"></i>
-          <h5>Spring Boot</h5>
-
-        </div>
-
-        <div class="skill-card reveal reveal-delay-4" style="--level:92%">
-          <i class="devicon-mysql-plain colored"></i>
-          <h5>MySQL</h5>
-
-        </div>
-
-        <div class="skill-card reveal" style="--level:85%">
-          <i class="devicon-postman-plain colored"></i>
-          <h5>REST APIs</h5>
-
-        </div>
-
-        <div class="skill-card reveal reveal-delay-1" style="--level:75%">
-          <i class="devicon-javascript-plain colored"></i>
-          <h5>JavaScript</h5>
-
-        </div>
-
-        <div class="skill-card reveal reveal-delay-2" style="--level:70%">
-          <i class="devicon-react-original colored"></i>
-          <h5>React</h5>
-
-        </div>
-
-        <div class="skill-card reveal reveal-delay-3" style="--level:72%">
-          <i class="devicon-html5-plain colored"></i>
-          <h5>HTML / CSS</h5>
-
-        </div>
-
-        <div class="skill-card reveal reveal-delay-4" style="--level:68%">
-          <i class="devicon-git-plain colored"></i>
-          <h5>Git</h5>
-
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="container">
-      <div class="section-tag reveal">Work History</div>
-      <h2 class="section-title reveal reveal-delay-1" style="margin-bottom:3rem">Experience</h2>
-
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <div class="timeline-date">
-            <i class="fa-regular fa-calendar"></i> 2025 — 2026
-          </div>
-          <div class="exp-card">
-            <h3>
-              <i class="fa-solid fa-code"></i> Backend Developer (Node.js)
-            </h3>
-            <div class="exp-company">
-              <i class="fa-solid fa-building"></i> Fayn Global
-            </div>
-            <ul class="exp-list">
-              <li>
-                Built and maintained <strong>RESTful APIs</strong> for core business features
-                powering the main product.
-              </li>
-              <li>
-                Implemented <strong>Razorpay payout integration</strong> with webhook handling,
-                transaction verification, and OTP-based withdrawal confirmation.
-              </li>
-              <li>
-                Designed a <strong>secure withdrawal flow</strong> allowing users to withdraw
-                funds directly to their bank accounts.
-              </li>
-              <li>
-                Engineered <strong>MySQL schemas, tables, and stored procedures</strong> for
-                efficient data processing and reporting.
-              </li>
-              <li>
-                Developed a <strong>location-based search engine</strong> with auto-detection
-                (pincode/city) and manual fallback logic.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-tag reveal">Portfolio</div>
-      <h2 class="section-title reveal reveal-delay-1" style="margin-bottom:3rem">Featured Projects</h2>
-
-      <div class="projects-grid">
-
-
-        <div class="project-card reveal">
-          <div class="project-number">01</div>
-          <div class="project-icon">
+        <div class="skills-grid">
+          <div class="skill-card reveal">
             <i class="devicon-nodejs-plain colored"></i>
+            <h5>Node.js</h5>
           </div>
-          <h3>
-            <a href="https://hrms.glets.in/" target="_blank" rel="noopener noreferrer">
-              GLETS HRMS <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i>
-            </a>
-          </h3>
-          <div class="project-period">
-            <i class="fa-regular fa-calendar-days"></i> 2025 — 2026
-          </div>
-          <p>
-            Face recognition-based HRMS with role-based admin and employee portals. Admin can
-            onboard employees, auto-generate default credentials, and view attendance &amp;
-            reports in real time. Employees log in with a default password, are prompted to
-            reset it on first login, then mark attendance via face verification (Face-api.js)
-            with automatic geolocation capture for each check-in.
-          </p>
-          <div class="project-tags">
-            <span><i class="devicon-nodejs-plain"></i> Node.js</span>
-            <span><i class="devicon-express-original"></i> Express</span>
-            <span><i class="devicon-mysql-plain"></i> MySQL</span>
-            <span><i class="devicon-nextjs-plain"></i> Next.js</span>
-            <span><i class="fa-solid fa-face-smile"></i> Face-api.js</span>
-            <span><i class="fa-solid fa-location-dot"></i> Geolocation</span>
-          </div>
-        </div>
-        <div class="project-card reveal">
-          <div class="project-number">02</div>
-          <div class="project-icon">
-            <i class="devicon-javascript-plain colored"></i>
-          </div>
-          <h3>
-            <a href="https://www.bodhigroupschennai.in/" target="_blank" rel="noopener noreferrer">
-              Bodhi Group Chennai <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7em;"></i>
-            </a>
-          </h3>
-          <div class="project-period">
-            <i class="fa-regular fa-calendar-days"></i> 2025 — 2026
-          </div>
-          <p>
-            Institute website showcasing courses, faculty, and campus details, built with
-            plain HTML, CSS &amp; JS. Integrated an admission enquiry form using EmailJS —
-            on submit, applicant details are instantly emailed without a backend server,
-            with client-side validation and a confirmation message on success.
-          </p>
-          <div class="project-tags">
-            <span><i class="devicon-html5-plain colored"></i> HTML5</span>
-            <span><i class="devicon-css3-plain colored"></i> CSS3</span>
-            <span><i class="devicon-javascript-plain"></i> JavaScript</span>
-            <span><i class="fa-solid fa-envelope"></i> EmailJS</span>
-          </div>
-        </div>
 
-        <!-- Project 3 -->
-        <div class="project-card reveal">
-          <div class="project-number">03</div>
-          <div class="project-icon">
-            <i class="devicon-nodejs-plain colored"></i>
+          <div class="skill-card reveal reveal-delay-1" style="--level: 88%">
+            <i class="devicon-express-original"></i>
+            <h5>Express</h5>
           </div>
-          <h3>Fayn Global</h3>
-          <div class="project-period">
-            <i class="fa-regular fa-calendar-days"></i> Dec 2025 — Feb 2026
-          </div>
-          <p>
-            Razorpay payout integration with webhook status handling. MySQL stored procedures
-            for payment &amp; search workflows. Full location search engine with pincode/city
-            and fallback logic.
-          </p>
-          <div class="project-tags">
-            <span><i class="devicon-nodejs-plain"></i> Node.js</span>
-            <span><i class="devicon-express-original"></i> Express</span>
-            <span><i class="devicon-mysql-plain"></i> MySQL</span>
-            <span><i class="fa-solid fa-credit-card"></i> Razorpay</span>
-          </div>
-        </div>
 
-        <!-- Project 4 -->
-        <div class="project-card reveal reveal-delay-1">
-          <div class="project-number">04</div>
-          <div class="project-icon">
-            <i class="devicon-nextjs-plain"></i>
+          <div class="skill-card reveal reveal-delay-2" style="--level: 85%">
+            <i class="devicon-java-plain colored"></i>
+            <h5>Java</h5>
           </div>
-          <h3>Wedding Show E-Commerce</h3>
-          <div class="project-period">
-            <i class="fa-regular fa-calendar-days"></i> Sep 2025 — Nov 2025
-          </div>
-          <p>
-            Full-stack e-commerce platform with Node.js backend and Next.js UI. Real-time
-            messaging between users and service providers. Complete order and product
-            management system.
-          </p>
-          <div class="project-tags">
-            <span><i class="devicon-nodejs-plain"></i> Node.js</span>
-            <span><i class="devicon-nextjs-plain"></i> Next.js</span>
-            <span><i class="devicon-mysql-plain"></i> MySQL</span>
-            <span><i class="fa-solid fa-bolt"></i> WebSocket</span>
-          </div>
-        </div>
 
-        <!-- Project 5 -->
-        <div class="project-card reveal reveal-delay-2">
-          <div class="project-number">05</div>
-          <div class="project-icon">
+          <div class="skill-card reveal reveal-delay-3" style="--level: 80%">
             <i class="devicon-spring-plain colored"></i>
+            <h5>Spring Boot</h5>
           </div>
-          <h3>Optical Billing System</h3>
-          <div class="project-period">
-            <i class="fa-regular fa-calendar-days"></i> Jan 2025 — Mar 2025
+
+          <div class="skill-card reveal reveal-delay-4" style="--level: 92%">
+            <i class="devicon-mysql-plain colored"></i>
+            <h5>MySQL</h5>
           </div>
-          <p>
-            Real-time billing system for optical stores with Java Spring Boot and Next.js.
-            Automatic calculation of lens prices, discounts, and taxes with full MySQL
-            inventory management.
-          </p>
-          <div class="project-tags">
-            <span><i class="devicon-java-plain"></i> Java</span>
-            <span><i class="devicon-spring-plain"></i> Spring Boot</span>
-            <span><i class="devicon-nextjs-plain"></i> Next.js</span>
-            <span><i class="devicon-mysql-plain"></i> MySQL</span>
+
+          <div class="skill-card reveal" style="--level: 85%">
+            <i class="devicon-postman-plain colored"></i>
+            <h5>REST APIs</h5>
+          </div>
+
+          <div class="skill-card reveal reveal-delay-3" style="--level: 72%">
+            <i class="devicon-html5-plain colored"></i>
+            <h5>HTML / CSS</h5>
+          </div>
+
+          <div class="skill-card reveal reveal-delay-1" style="--level: 75%">
+            <i class="devicon-javascript-plain colored"></i>
+            <h5>JavaScript</h5>
+          </div>
+
+          <div class="skill-card reveal reveal-delay-2" style="--level: 70%">
+            <i class="devicon-react-original colored"></i>
+            <h5>React</h5>
+          </div>
+
+          <div class="skill-card reveal reveal-delay-4" style="--level: 90%">
+            <i class="devicon-nextjs-plain"></i>
+            <h5>Next.js</h5>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <div class="contact-wrapper">
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-tag reveal">Work History</div>
+        <h2
+          class="section-title reveal reveal-delay-1"
+          style="margin-bottom: 3rem"
+        >
+          Experience
+        </h2>
 
-        <div class="contact-info">
-          <div class="section-tag reveal">Get In Touch</div>
-          <h2 class="section-title reveal reveal-delay-1">Let's build<br>something great</h2>
-          <p class="reveal reveal-delay-2">
-            Available for backend developer roles, freelance projects, and collaborations.
-            I respond within 24 hours.
-          </p>
-
-          <div class="contact-items">
-            <a href="tel:+918248225846" class="contact-item reveal reveal-delay-2">
-              <div class="contact-item-icon">
-                <i class="fa-solid fa-phone"></i>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-date">
+              <i class="fa-regular fa-calendar"></i> 2025 — 2026
+            </div>
+            <div class="exp-card">
+              <h3>
+                <i class="fa-solid fa-code"></i> Backend Developer (Node.js)
+              </h3>
+              <div class="exp-company">
+                <i class="fa-solid fa-building"></i> Fayn Global
               </div>
-              <div class="contact-item-text">
-                <strong>Phone</strong>
-                <span>+91 82482 25846</span>
-              </div>
-            </a>
-            <a href="mailto:kumaravel8248@gmail.com" class="contact-item reveal reveal-delay-3">
-              <div class="contact-item-icon">
+              <ul class="exp-list">
+                <li>
+                  Built and maintained <strong>RESTful APIs</strong> for core
+                  business features powering the main product.
+                </li>
+                <li>
+                  Implemented <strong>Razorpay payout integration</strong> with
+                  webhook handling, transaction verification, and OTP-based
+                  withdrawal confirmation.
+                </li>
+                <li>
+                  Designed a <strong>secure withdrawal flow</strong> allowing
+                  users to withdraw funds directly to their bank accounts.
+                </li>
+                <li>
+                  Engineered
+                  <strong>MySQL schemas, tables, and stored procedures</strong>
+                  for efficient data processing and reporting.
+                </li>
+                <li>
+                  Developed a <strong>location-based search engine</strong> with
+                  auto-detection (pincode/city) and manual fallback logic.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-tag reveal">Portfolio</div>
+        <h2
+          class="section-title reveal reveal-delay-1"
+          style="margin-bottom: 3rem"
+        >
+          Featured Projects
+        </h2>
+
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-number">01</div>
+            <div class="project-icon">
+              <i class="devicon-nodejs-plain colored"></i>
+            </div>
+            <h3>
+              <a
+                href="https://hrms.glets.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GLETS HRMS
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square"
+                  style="font-size: 0.7em"
+                ></i>
+              </a>
+            </h3>
+            <div class="project-period">
+              <i class="fa-regular fa-calendar-days"></i> 2025 — 2026
+            </div>
+            <p>
+              Face recognition-based HRMS with role-based admin and employee
+              portals. Admin can onboard employees, auto-generate default
+              credentials, and view attendance &amp; reports in real time.
+              Employees log in with a default password, are prompted to reset it
+              on first login, then mark attendance via face verification
+              (Face-api.js) with automatic geolocation capture for each
+              check-in.
+            </p>
+            <div class="project-tags">
+              <span><i class="devicon-nodejs-plain"></i> Node.js</span>
+              <span><i class="devicon-express-original"></i> Express</span>
+              <span><i class="devicon-mysql-plain"></i> MySQL</span>
+              <span><i class="devicon-nextjs-plain"></i> Next.js</span>
+              <span><i class="fa-solid fa-face-smile"></i> Face-api.js</span>
+              <span><i class="fa-solid fa-location-dot"></i> Geolocation</span>
+            </div>
+          </div>
+          <div class="project-card reveal">
+            <div class="project-number">02</div>
+            <div class="project-icon">
+              <i class="devicon-javascript-plain colored"></i>
+            </div>
+            <h3>
+              <a
+                href="https://www.bodhigroupschennai.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Bodhi Group Chennai
+                <i
+                  class="fa-solid fa-arrow-up-right-from-square"
+                  style="font-size: 0.7em"
+                ></i>
+              </a>
+            </h3>
+            <div class="project-period">
+              <i class="fa-regular fa-calendar-days"></i> 2025 — 2026
+            </div>
+            <p>
+              Institute website showcasing courses, faculty, and campus details,
+              built with plain HTML, CSS &amp; JS. Integrated an admission
+              enquiry form using EmailJS — on submit, applicant details are
+              instantly emailed without a backend server, with client-side
+              validation and a confirmation message on success.
+            </p>
+            <div class="project-tags">
+              <span><i class="devicon-html5-plain colored"></i> HTML5</span>
+              <span><i class="devicon-css3-plain colored"></i> CSS3</span>
+              <span><i class="devicon-javascript-plain"></i> JavaScript</span>
+              <span><i class="fa-solid fa-envelope"></i> EmailJS</span>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card reveal">
+            <div class="project-number">03</div>
+            <div class="project-icon">
+              <i class="devicon-nodejs-plain colored"></i>
+            </div>
+            <h3>Fayn Global</h3>
+            <div class="project-period">
+              <i class="fa-regular fa-calendar-days"></i> Dec 2025 — Feb 2026
+            </div>
+            <p>
+              Razorpay payout integration with webhook status handling. MySQL
+              stored procedures for payment &amp; search workflows. Full
+              location search engine with pincode/city and fallback logic.
+            </p>
+            <div class="project-tags">
+              <span><i class="devicon-nodejs-plain"></i> Node.js</span>
+              <span><i class="devicon-express-original"></i> Express</span>
+              <span><i class="devicon-mysql-plain"></i> MySQL</span>
+              <span><i class="fa-solid fa-credit-card"></i> Razorpay</span>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card reveal reveal-delay-1">
+            <div class="project-number">04</div>
+            <div class="project-icon">
+              <i class="devicon-nextjs-plain"></i>
+            </div>
+            <h3>Wedding Show E-Commerce</h3>
+            <div class="project-period">
+              <i class="fa-regular fa-calendar-days"></i> Sep 2025 — Nov 2025
+            </div>
+            <p>
+              Full-stack e-commerce platform with Node.js backend and Next.js
+              UI. Real-time messaging between users and service providers.
+              Complete order and product management system.
+            </p>
+            <div class="project-tags">
+              <span><i class="devicon-nodejs-plain"></i> Node.js</span>
+              <span><i class="devicon-nextjs-plain"></i> Next.js</span>
+              <span><i class="devicon-mysql-plain"></i> MySQL</span>
+              <span><i class="fa-solid fa-bolt"></i> WebSocket</span>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card reveal reveal-delay-2">
+            <div class="project-number">05</div>
+            <div class="project-icon">
+              <i class="devicon-spring-plain colored"></i>
+            </div>
+            <h3>Optical Billing System</h3>
+            <div class="project-period">
+              <i class="fa-regular fa-calendar-days"></i> Jan 2025 — Mar 2025
+            </div>
+            <p>
+              Real-time billing system for optical stores with Java Spring Boot
+              and Next.js. Automatic calculation of lens prices, discounts, and
+              taxes with full MySQL inventory management.
+            </p>
+            <div class="project-tags">
+              <span><i class="devicon-java-plain"></i> Java</span>
+              <span><i class="devicon-spring-plain"></i> Spring Boot</span>
+              <span><i class="devicon-nextjs-plain"></i> Next.js</span>
+              <span><i class="devicon-mysql-plain"></i> MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <div class="section-tag reveal">Get In Touch</div>
+            <h2 class="section-title reveal reveal-delay-1">
+              Let's build<br />something great
+            </h2>
+            <p class="reveal reveal-delay-2">
+              Available for backend developer roles, freelance projects, and
+              collaborations. I respond within 24 hours.
+            </p>
+
+            <div class="contact-items">
+              <a
+                href="tel:+918248225846"
+                class="contact-item reveal reveal-delay-2"
+              >
+                <div class="contact-item-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="contact-item-text">
+                  <strong>Phone</strong>
+                  <span>+91 82482 25846</span>
+                </div>
+              </a>
+              <a
+                href="mailto:kumaravel8248@gmail.com"
+                class="contact-item reveal reveal-delay-3"
+              >
+                <div class="contact-item-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="contact-item-text">
+                  <strong>Email</strong>
+                  <span>kumaravel8248@gmail.com</span>
+                </div>
+              </a>
+              <a href="#" class="contact-item reveal reveal-delay-4">
+                <div class="contact-item-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="contact-item-text">
+                  <strong>Location</strong>
+                  <span>Chennai, Poonamallee</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="socials reveal">
+              <a
+                href="https://github.com/kumaravevel/"
+                class="social-btn"
+                target="_blank"
+                title="GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kumaravel-m-a5352730a/"
+                class="social-btn"
+                target="_blank"
+                title="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                href="mailto:kumaravel8248@gmail.com"
+                class="social-btn"
+                title="Email"
+              >
                 <i class="fa-solid fa-envelope"></i>
-              </div>
-              <div class="contact-item-text">
-                <strong>Email</strong>
-                <span>kumaravel8248@gmail.com</span>
-              </div>
-            </a>
-            <a href="#" class="contact-item reveal reveal-delay-4">
-              <div class="contact-item-icon">
-                <i class="fa-solid fa-location-dot"></i>
-              </div>
-              <div class="contact-item-text">
-                <strong>Location</strong>
-                <span>Chennai, Poonamallee</span>
-              </div>
-            </a>
+              </a>
+              <a href="tel:+918248225846" class="social-btn" title="Phone">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
           </div>
 
-          <div class="socials reveal">
-            <a href="https://github.com/kumaravevel/" class="social-btn" target="_blank" title="GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/kumaravel-m-a5352730a/" class="social-btn" target="_blank"
-              title="LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="mailto:kumaravel8248@gmail.com" class="social-btn" title="Email">
-              <i class="fa-solid fa-envelope"></i>
-            </a>
-            <a href="tel:+918248225846" class="social-btn" title="Phone">
-              <i class="fa-solid fa-phone"></i>
-            </a>
+          <div class="contact-form-area reveal reveal-delay-2">
+            <div class="form-group">
+              <label> <i class="fa-solid fa-user"></i> Your Name </label>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                placeholder="John Doe"
+              />
+            </div>
+
+            <div class="form-group">
+              <label>
+                <i class="fa-solid fa-envelope"></i> Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="john@company.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label> <i class="fa-solid fa-tag"></i> Subject </label>
+              <input
+                type="text"
+                id="subject"
+                class="form-control"
+                placeholder="Job Opportunity / Project"
+              />
+            </div>
+
+            <div class="form-group">
+              <label> <i class="fa-solid fa-comment-dots"></i> Message </label>
+              <textarea
+                id="message"
+                class="form-control"
+                rows="5"
+                placeholder="Tell me about the opportunity..."
+              ></textarea>
+            </div>
+
+            <button class="btn-submit" onclick="sendWhatsApp()">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
           </div>
         </div>
-
-        <div class="contact-form-area reveal reveal-delay-2">
-
-          <div class="form-group">
-            <label>
-              <i class="fa-solid fa-user"></i> Your Name
-            </label>
-            <input type="text" id="name" class="form-control" placeholder="John Doe" />
-          </div>
-
-          <div class="form-group">
-            <label>
-              <i class="fa-solid fa-envelope"></i> Email Address
-            </label>
-            <input type="email" id="email" class="form-control" placeholder="john@company.com" />
-          </div>
-
-          <div class="form-group">
-            <label>
-              <i class="fa-solid fa-tag"></i> Subject
-            </label>
-            <input type="text" id="subject" class="form-control" placeholder="Job Opportunity / Project" />
-          </div>
-
-          <div class="form-group">
-            <label>
-              <i class="fa-solid fa-comment-dots"></i> Message
-            </label>
-            <textarea id="message" class="form-control" rows="5"
-              placeholder="Tell me about the opportunity..."></textarea>
-          </div>
-
-          <button class="btn-submit" onclick="sendWhatsApp()">
-            <i class="fa-solid fa-paper-plane"></i> Send Message
-          </button>
-
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>
-      <i class="fa-solid fa-code"></i>
-      &copy; 2026 <span>Kumaravel M</span>
-      &middot; Backend Developer &middot;
-      Built with <i class="fa-solid fa-heart" style="color:#e11d48;font-size:0.8em;"></i> in Chennai
-    </p>
-  </footer>
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        <i class="fa-solid fa-code"></i>
+        &copy; 2026 <span>Kumaravel M</span> &middot; Backend Developer &middot;
+        Built with
+        <i
+          class="fa-solid fa-heart"
+          style="color: #e11d48; font-size: 0.8em"
+        ></i>
+        in Chennai
+      </p>
+    </footer>
 
-  <script>
+    <script>
+      // ── Custom Cursor ──────────────────────────────────────
+      const dot = document.getElementById("cursorDot");
+      const ring = document.getElementById("cursorRing");
+      let mx = 0,
+        my = 0,
+        rx = 0,
+        ry = 0;
+      document.addEventListener("mousemove", (e) => {
+        mx = e.clientX;
+        my = e.clientY;
+        if (dot) {
+          dot.style.left = mx + "px";
+          dot.style.top = my + "px";
+        }
+      });
+      (function animRing() {
+        rx += (mx - rx) * 0.1;
+        ry += (my - ry) * 0.1;
+        if (ring) {
+          ring.style.left = rx + "px";
+          ring.style.top = ry + "px";
+        }
+        requestAnimationFrame(animRing);
+      })();
 
-    // ── Custom Cursor ──────────────────────────────────────
-    const dot = document.getElementById('cursorDot');
-    const ring = document.getElementById('cursorRing');
-    let mx = 0, my = 0, rx = 0, ry = 0;
-    document.addEventListener('mousemove', e => {
-      mx = e.clientX; my = e.clientY;
-      if (dot) { dot.style.left = mx + 'px'; dot.style.top = my + 'px'; }
-    });
-    (function animRing() {
-      rx += (mx - rx) * 0.1; ry += (my - ry) * 0.1;
-      if (ring) { ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; }
-      requestAnimationFrame(animRing);
-    })();
+      // ── Cursor hover-grow on links/buttons ─────────────────
+      document.querySelectorAll("a, button").forEach((el) => {
+        el.addEventListener(
+          "mouseenter",
+          () => ring && ring.classList.add("ring-hover"),
+        );
+        el.addEventListener(
+          "mouseleave",
+          () => ring && ring.classList.remove("ring-hover"),
+        );
+      });
 
-    // ── Cursor hover-grow on links/buttons ─────────────────
-    document.querySelectorAll('a, button').forEach(el => {
-      el.addEventListener('mouseenter', () => ring && ring.classList.add('ring-hover'));
-      el.addEventListener('mouseleave', () => ring && ring.classList.remove('ring-hover'));
-    });
-
-
-    const phrases = ['RESTful APIs.', 'Scalable Backends.', 'MySQL Databases.', 'Payment Systems.', 'Location Search.'];
-    let p = 0, c = 0, del = false;
-    const te = document.getElementById('typed');
-    function typeLoop() {
-      if (!te) return;
-      const cur = phrases[p];
-      if (!del) {
-        te.textContent = cur.slice(0, ++c);
-        if (c === cur.length) { del = true; setTimeout(typeLoop, 2000); return; }
-      } else {
-        te.textContent = cur.slice(0, --c);
-        if (c === 0) { del = false; p = (p + 1) % phrases.length; setTimeout(typeLoop, 400); return; }
+      const phrases = [
+        "RESTful APIs.",
+        "Scalable Backends.",
+        "MySQL Databases.",
+        "Payment Systems.",
+        "Location Search.",
+      ];
+      let p = 0,
+        c = 0,
+        del = false;
+      const te = document.getElementById("typed");
+      function typeLoop() {
+        if (!te) return;
+        const cur = phrases[p];
+        if (!del) {
+          te.textContent = cur.slice(0, ++c);
+          if (c === cur.length) {
+            del = true;
+            setTimeout(typeLoop, 2000);
+            return;
+          }
+        } else {
+          te.textContent = cur.slice(0, --c);
+          if (c === 0) {
+            del = false;
+            p = (p + 1) % phrases.length;
+            setTimeout(typeLoop, 400);
+            return;
+          }
+        }
+        setTimeout(typeLoop, del ? 60 : 100);
       }
-      setTimeout(typeLoop, del ? 60 : 100);
-    }
-    typeLoop();
+      typeLoop();
 
-    // ── Scroll Reveal ──────────────────────────────────────
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal, .skill-card').forEach(el => observer.observe(el));
+      // ── Scroll Reveal ──────────────────────────────────────
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".reveal, .skill-card")
+        .forEach((el) => observer.observe(el));
 
-    // ── Navbar Shrink ──────────────────────────────────────
-    window.addEventListener('scroll', () => {
-      document.querySelector('.navbar').style.padding = window.scrollY > 50 ? '10px 0' : '16px 0';
-    });
+      // ── Navbar Shrink ──────────────────────────────────────
+      window.addEventListener("scroll", () => {
+        document.querySelector(".navbar").style.padding =
+          window.scrollY > 50 ? "10px 0" : "16px 0";
+      });
 
-    // ── Mobile Nav ─────────────────────────────────────────
-    function closeMobile(t) {
-      document.getElementById('mobileNav').classList.remove('open');
-      if (t) setTimeout(() => {
-        const el = document.querySelector(t);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }, 200);
-    }
-
-    // ── Contact Form ───────────────────────────────────────
-    function handleSubmit(btn) {
-      btn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Message Sent!';
-      btn.style.background = '#16a34a';
-      btn.style.color = '#fff';
-      setTimeout(() => {
-        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
-        btn.style.background = '';
-        btn.style.color = '';
-      }, 2500);
-    }
-
-
-    function sendWhatsApp() {
-
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const subject = document.getElementById("subject").value.trim();
-      const message = document.getElementById("message").value.trim();
-
-      if (!name || !email || !subject || !message) {
-        alert("Please fill all fields.");
-        return;
+      // ── Mobile Nav ─────────────────────────────────────────
+      function closeMobile(t) {
+        document.getElementById("mobileNav").classList.remove("open");
+        if (t)
+          setTimeout(() => {
+            const el = document.querySelector(t);
+            if (el) el.scrollIntoView({ behavior: "smooth" });
+          }, 200);
       }
 
-      const phone = "918248225846";
+      // ── Contact Form ───────────────────────────────────────
+      function handleSubmit(btn) {
+        btn.innerHTML =
+          '<i class="fa-solid fa-circle-check"></i> Message Sent!';
+        btn.style.background = "#16a34a";
+        btn.style.color = "#fff";
+        setTimeout(() => {
+          btn.innerHTML =
+            '<i class="fa-solid fa-paper-plane"></i> Send Message';
+          btn.style.background = "";
+          btn.style.color = "";
+        }, 2500);
+      }
 
-      const text =
-        `*New Portfolio Contact*
+      function sendWhatsApp() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !subject || !message) {
+          alert("Please fill all fields.");
+          return;
+        }
+
+        const phone = "918248225846";
+
+        const text = `*New Portfolio Contact*
 
       👤 Name: ${name}
       📧 Email: ${email}
@@ -699,269 +876,499 @@
       💬 Message:
       ${message}`;
 
-      const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 
-      window.open(url, "_blank");
-    }
-
-
-    /**
- * ElectricBorder - vanilla JS port (no React/build step required)
- * Draws an animated, noisy glowing border around any element using canvas.
- *
- * Usage:
- *   new ElectricBorder(document.querySelector('.project-card'), {
- *     color: '#7df9ff',
- *     speed: 1,
- *     chaos: 0.12,
- *     borderRadius: 16
- *   });
- */
-    (function (global) {
-      function random(x) {
-        return (Math.sin(x * 12.9898) * 43758.5453) % 1;
+        window.open(url, "_blank");
       }
 
-      function noise2D(x, y) {
-        const i = Math.floor(x);
-        const j = Math.floor(y);
-        const fx = x - i;
-        const fy = y - j;
-
-        const a = random(i + j * 57);
-        const b = random(i + 1 + j * 57);
-        const c = random(i + (j + 1) * 57);
-        const d = random(i + 1 + (j + 1) * 57);
-
-        const ux = fx * fx * (3.0 - 2.0 * fx);
-        const uy = fy * fy * (3.0 - 2.0 * fy);
-
-        return a * (1 - ux) * (1 - uy) + b * ux * (1 - uy) + c * (1 - ux) * uy + d * ux * uy;
-      }
-
-      function octavedNoise(x, octaves, lacunarity, gain, baseAmplitude, baseFrequency, time, seed, baseFlatness) {
-        let y = 0;
-        let amplitude = baseAmplitude;
-        let frequency = baseFrequency;
-
-        for (let i = 0; i < octaves; i++) {
-          let octaveAmplitude = amplitude;
-          if (i === 0) octaveAmplitude *= baseFlatness;
-          y += octaveAmplitude * noise2D(frequency * x + seed * 100, time * frequency * 0.3);
-          frequency *= lacunarity;
-          amplitude *= gain;
+      /**
+       * ElectricBorder - vanilla JS port (no React/build step required)
+       * Draws an animated, noisy glowing border around any element using canvas.
+       *
+       * Usage:
+       *   new ElectricBorder(document.querySelector('.project-card'), {
+       *     color: '#7df9ff',
+       *     speed: 1,
+       *     chaos: 0.12,
+       *     borderRadius: 16
+       *   });
+       */
+      (function (global) {
+        function random(x) {
+          return (Math.sin(x * 12.9898) * 43758.5453) % 1;
         }
-        return y;
-      }
 
-      function getCornerPoint(centerX, centerY, radius, startAngle, arcLength, progress) {
-        const angle = startAngle + progress * arcLength;
-        return { x: centerX + radius * Math.cos(angle), y: centerY + radius * Math.sin(angle) };
-      }
+        function noise2D(x, y) {
+          const i = Math.floor(x);
+          const j = Math.floor(y);
+          const fx = x - i;
+          const fy = y - j;
 
-      function getRoundedRectPoint(t, left, top, width, height, radius) {
-        const straightWidth = width - 2 * radius;
-        const straightHeight = height - 2 * radius;
-        const cornerArc = (Math.PI * radius) / 2;
-        const totalPerimeter = 2 * straightWidth + 2 * straightHeight + 4 * cornerArc;
-        const distance = t * totalPerimeter;
+          const a = random(i + j * 57);
+          const b = random(i + 1 + j * 57);
+          const c = random(i + (j + 1) * 57);
+          const d = random(i + 1 + (j + 1) * 57);
 
-        let accumulated = 0;
+          const ux = fx * fx * (3.0 - 2.0 * fx);
+          const uy = fy * fy * (3.0 - 2.0 * fy);
 
-        if (distance <= accumulated + straightWidth) {
-          const progress = (distance - accumulated) / straightWidth;
-          return { x: left + radius + progress * straightWidth, y: top };
+          return (
+            a * (1 - ux) * (1 - uy) +
+            b * ux * (1 - uy) +
+            c * (1 - ux) * uy +
+            d * ux * uy
+          );
         }
-        accumulated += straightWidth;
 
-        if (distance <= accumulated + cornerArc) {
+        function octavedNoise(
+          x,
+          octaves,
+          lacunarity,
+          gain,
+          baseAmplitude,
+          baseFrequency,
+          time,
+          seed,
+          baseFlatness,
+        ) {
+          let y = 0;
+          let amplitude = baseAmplitude;
+          let frequency = baseFrequency;
+
+          for (let i = 0; i < octaves; i++) {
+            let octaveAmplitude = amplitude;
+            if (i === 0) octaveAmplitude *= baseFlatness;
+            y +=
+              octaveAmplitude *
+              noise2D(frequency * x + seed * 100, time * frequency * 0.3);
+            frequency *= lacunarity;
+            amplitude *= gain;
+          }
+          return y;
+        }
+
+        function getCornerPoint(
+          centerX,
+          centerY,
+          radius,
+          startAngle,
+          arcLength,
+          progress,
+        ) {
+          const angle = startAngle + progress * arcLength;
+          return {
+            x: centerX + radius * Math.cos(angle),
+            y: centerY + radius * Math.sin(angle),
+          };
+        }
+
+        function getRoundedRectPoint(t, left, top, width, height, radius) {
+          const straightWidth = width - 2 * radius;
+          const straightHeight = height - 2 * radius;
+          const cornerArc = (Math.PI * radius) / 2;
+          const totalPerimeter =
+            2 * straightWidth + 2 * straightHeight + 4 * cornerArc;
+          const distance = t * totalPerimeter;
+
+          let accumulated = 0;
+
+          if (distance <= accumulated + straightWidth) {
+            const progress = (distance - accumulated) / straightWidth;
+            return { x: left + radius + progress * straightWidth, y: top };
+          }
+          accumulated += straightWidth;
+
+          if (distance <= accumulated + cornerArc) {
+            const progress = (distance - accumulated) / cornerArc;
+            return getCornerPoint(
+              left + width - radius,
+              top + radius,
+              radius,
+              -Math.PI / 2,
+              Math.PI / 2,
+              progress,
+            );
+          }
+          accumulated += cornerArc;
+
+          if (distance <= accumulated + straightHeight) {
+            const progress = (distance - accumulated) / straightHeight;
+            return {
+              x: left + width,
+              y: top + radius + progress * straightHeight,
+            };
+          }
+          accumulated += straightHeight;
+
+          if (distance <= accumulated + cornerArc) {
+            const progress = (distance - accumulated) / cornerArc;
+            return getCornerPoint(
+              left + width - radius,
+              top + height - radius,
+              radius,
+              0,
+              Math.PI / 2,
+              progress,
+            );
+          }
+          accumulated += cornerArc;
+
+          if (distance <= accumulated + straightWidth) {
+            const progress = (distance - accumulated) / straightWidth;
+            return {
+              x: left + width - radius - progress * straightWidth,
+              y: top + height,
+            };
+          }
+          accumulated += straightWidth;
+
+          if (distance <= accumulated + cornerArc) {
+            const progress = (distance - accumulated) / cornerArc;
+            return getCornerPoint(
+              left + radius,
+              top + height - radius,
+              radius,
+              Math.PI / 2,
+              Math.PI / 2,
+              progress,
+            );
+          }
+          accumulated += cornerArc;
+
+          if (distance <= accumulated + straightHeight) {
+            const progress = (distance - accumulated) / straightHeight;
+            return {
+              x: left,
+              y: top + height - radius - progress * straightHeight,
+            };
+          }
+          accumulated += straightHeight;
+
           const progress = (distance - accumulated) / cornerArc;
-          return getCornerPoint(left + width - radius, top + radius, radius, -Math.PI / 2, Math.PI / 2, progress);
-        }
-        accumulated += cornerArc;
-
-        if (distance <= accumulated + straightHeight) {
-          const progress = (distance - accumulated) / straightHeight;
-          return { x: left + width, y: top + radius + progress * straightHeight };
-        }
-        accumulated += straightHeight;
-
-        if (distance <= accumulated + cornerArc) {
-          const progress = (distance - accumulated) / cornerArc;
-          return getCornerPoint(left + width - radius, top + height - radius, radius, 0, Math.PI / 2, progress);
-        }
-        accumulated += cornerArc;
-
-        if (distance <= accumulated + straightWidth) {
-          const progress = (distance - accumulated) / straightWidth;
-          return { x: left + width - radius - progress * straightWidth, y: top + height };
-        }
-        accumulated += straightWidth;
-
-        if (distance <= accumulated + cornerArc) {
-          const progress = (distance - accumulated) / cornerArc;
-          return getCornerPoint(left + radius, top + height - radius, radius, Math.PI / 2, Math.PI / 2, progress);
-        }
-        accumulated += cornerArc;
-
-        if (distance <= accumulated + straightHeight) {
-          const progress = (distance - accumulated) / straightHeight;
-          return { x: left, y: top + height - radius - progress * straightHeight };
-        }
-        accumulated += straightHeight;
-
-        const progress = (distance - accumulated) / cornerArc;
-        return getCornerPoint(left + radius, top + radius, radius, Math.PI, Math.PI / 2, progress);
-      }
-
-      class ElectricBorder {
-        constructor(el, options = {}) {
-          this.el = el;
-          this.color = options.color || '#5227FF';
-          this.speed = options.speed ?? 1;
-          this.chaos = options.chaos ?? 0.12;
-          this.borderRadius = options.borderRadius ?? 24;
-          this.time = 0;
-          this.lastFrameTime = 0;
-          this.dpr = Math.min(window.devicePixelRatio || 1, 2);
-
-          this._build();
-          this._start();
+          return getCornerPoint(
+            left + radius,
+            top + radius,
+            radius,
+            Math.PI,
+            Math.PI / 2,
+            progress,
+          );
         }
 
-        _build() {
-          const el = this.el;
-          el.classList.add('electric-border');
-          el.style.setProperty('--electric-border-color', this.color);
-          el.style.borderRadius = this.borderRadius + 'px';
+        class ElectricBorder {
+          constructor(el, options = {}) {
+            this.el = el;
+            this.color = options.color || "#5227FF";
+            this.speed = options.speed ?? 1;
+            this.chaos = options.chaos ?? 0.12;
+            this.borderRadius = options.borderRadius ?? 24;
+            this.time = 0;
+            this.lastFrameTime = 0;
+            this.dpr = Math.min(window.devicePixelRatio || 1, 2);
 
-          // Move existing children into an eb-content wrapper so the
-          // canvas/glow layers can sit alongside them.
-          const content = document.createElement('div');
-          content.className = 'eb-content';
-          while (el.firstChild) content.appendChild(el.firstChild);
+            this._build();
+            this._start();
+          }
 
-          const canvasContainer = document.createElement('div');
-          canvasContainer.className = 'eb-canvas-container';
-          const canvas = document.createElement('canvas');
-          canvas.className = 'eb-canvas';
-          canvasContainer.appendChild(canvas);
+          _build() {
+            const el = this.el;
+            el.classList.add("electric-border");
+            el.style.setProperty("--electric-border-color", this.color);
+            el.style.borderRadius = this.borderRadius + "px";
 
-          const layers = document.createElement('div');
-          layers.className = 'eb-layers';
-          layers.innerHTML =
-            '<div class="eb-glow-1"></div><div class="eb-glow-2"></div><div class="eb-background-glow"></div>';
+            // Move existing children into an eb-content wrapper so the
+            // canvas/glow layers can sit alongside them.
+            const content = document.createElement("div");
+            content.className = "eb-content";
+            while (el.firstChild) content.appendChild(el.firstChild);
 
-          el.appendChild(canvasContainer);
-          el.appendChild(layers);
-          el.appendChild(content);
+            const canvasContainer = document.createElement("div");
+            canvasContainer.className = "eb-canvas-container";
+            const canvas = document.createElement("canvas");
+            canvas.className = "eb-canvas";
+            canvasContainer.appendChild(canvas);
 
-          this.canvas = canvas;
-          this.ctx = canvas.getContext('2d');
+            const layers = document.createElement("div");
+            layers.className = "eb-layers";
+            layers.innerHTML =
+              '<div class="eb-glow-1"></div><div class="eb-glow-2"></div><div class="eb-background-glow"></div>';
 
-          this._updateSize();
-          this.resizeObserver = new ResizeObserver(() => this._updateSize());
-          this.resizeObserver.observe(el);
-        }
+            el.appendChild(canvasContainer);
+            el.appendChild(layers);
+            el.appendChild(content);
 
-        _updateSize() {
-          const borderOffset = 60;
-          const rect = this.el.getBoundingClientRect();
-          const width = rect.width + borderOffset * 2;
-          const height = rect.height + borderOffset * 2;
-          const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            this.canvas = canvas;
+            this.ctx = canvas.getContext("2d");
 
-          this.canvas.width = width * dpr;
-          this.canvas.height = height * dpr;
-          this.canvas.style.width = width + 'px';
-          this.canvas.style.height = height + 'px';
+            this._updateSize();
+            this.resizeObserver = new ResizeObserver(() => this._updateSize());
+            this.resizeObserver.observe(el);
+          }
 
-          this.dpr = dpr;
-          this.width = width;
-          this.height = height;
-        }
-
-        _start() {
-          const octaves = 10;
-          const lacunarity = 1.6;
-          const gain = 0.7;
-          const amplitude = this.chaos;
-          const frequency = 10;
-          const baseFlatness = 0;
-          const displacement = 60;
-          const borderOffset = 60;
-
-          const draw = (currentTime) => {
-            const ctx = this.ctx;
+          _updateSize() {
+            const borderOffset = 60;
+            const rect = this.el.getBoundingClientRect();
+            const width = rect.width + borderOffset * 2;
+            const height = rect.height + borderOffset * 2;
             const dpr = Math.min(window.devicePixelRatio || 1, 2);
-            if (dpr !== this.dpr) this._updateSize();
 
-            const deltaTime = (currentTime - this.lastFrameTime) / 1000;
-            this.time += deltaTime * this.speed;
-            this.lastFrameTime = currentTime;
+            this.canvas.width = width * dpr;
+            this.canvas.height = height * dpr;
+            this.canvas.style.width = width + "px";
+            this.canvas.style.height = height + "px";
 
-            ctx.setTransform(1, 0, 0, 1, 0, 0);
-            ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-            ctx.scale(this.dpr, this.dpr);
+            this.dpr = dpr;
+            this.width = width;
+            this.height = height;
+          }
 
-            ctx.strokeStyle = this.color;
-            ctx.lineWidth = 1;
-            ctx.lineCap = 'round';
-            ctx.lineJoin = 'round';
+          _start() {
+            const octaves = 10;
+            const lacunarity = 1.6;
+            const gain = 0.7;
+            const amplitude = this.chaos;
+            const frequency = 10;
+            const baseFlatness = 0;
+            const displacement = 60;
+            const borderOffset = 60;
 
-            const left = borderOffset;
-            const top = borderOffset;
-            const borderWidth = this.width - 2 * borderOffset;
-            const borderHeight = this.height - 2 * borderOffset;
-            const maxRadius = Math.min(borderWidth, borderHeight) / 2;
-            const radius = Math.min(this.borderRadius, maxRadius);
+            const draw = (currentTime) => {
+              const ctx = this.ctx;
+              const dpr = Math.min(window.devicePixelRatio || 1, 2);
+              if (dpr !== this.dpr) this._updateSize();
 
-            const approxPerimeter = 2 * (borderWidth + borderHeight) + 2 * Math.PI * radius;
-            const sampleCount = Math.floor(approxPerimeter / 2);
+              const deltaTime = (currentTime - this.lastFrameTime) / 1000;
+              this.time += deltaTime * this.speed;
+              this.lastFrameTime = currentTime;
 
-            ctx.beginPath();
-            for (let i = 0; i <= sampleCount; i++) {
-              const progress = i / sampleCount;
-              const point = getRoundedRectPoint(progress, left, top, borderWidth, borderHeight, radius);
+              ctx.setTransform(1, 0, 0, 1, 0, 0);
+              ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+              ctx.scale(this.dpr, this.dpr);
 
-              const xNoise = octavedNoise(progress * 8, octaves, lacunarity, gain, amplitude, frequency, this.time, 0, baseFlatness);
-              const yNoise = octavedNoise(progress * 8, octaves, lacunarity, gain, amplitude, frequency, this.time, 1, baseFlatness);
+              ctx.strokeStyle = this.color;
+              ctx.lineWidth = 1;
+              ctx.lineCap = "round";
+              ctx.lineJoin = "round";
 
-              const dx = point.x + xNoise * displacement;
-              const dy = point.y + yNoise * displacement;
+              const left = borderOffset;
+              const top = borderOffset;
+              const borderWidth = this.width - 2 * borderOffset;
+              const borderHeight = this.height - 2 * borderOffset;
+              const maxRadius = Math.min(borderWidth, borderHeight) / 2;
+              const radius = Math.min(this.borderRadius, maxRadius);
 
-              if (i === 0) ctx.moveTo(dx, dy);
-              else ctx.lineTo(dx, dy);
-            }
-            ctx.closePath();
-            ctx.stroke();
+              const approxPerimeter =
+                2 * (borderWidth + borderHeight) + 2 * Math.PI * radius;
+              const sampleCount = Math.floor(approxPerimeter / 2);
+
+              ctx.beginPath();
+              for (let i = 0; i <= sampleCount; i++) {
+                const progress = i / sampleCount;
+                const point = getRoundedRectPoint(
+                  progress,
+                  left,
+                  top,
+                  borderWidth,
+                  borderHeight,
+                  radius,
+                );
+
+                const xNoise = octavedNoise(
+                  progress * 8,
+                  octaves,
+                  lacunarity,
+                  gain,
+                  amplitude,
+                  frequency,
+                  this.time,
+                  0,
+                  baseFlatness,
+                );
+                const yNoise = octavedNoise(
+                  progress * 8,
+                  octaves,
+                  lacunarity,
+                  gain,
+                  amplitude,
+                  frequency,
+                  this.time,
+                  1,
+                  baseFlatness,
+                );
+
+                const dx = point.x + xNoise * displacement;
+                const dy = point.y + yNoise * displacement;
+
+                if (i === 0) ctx.moveTo(dx, dy);
+                else ctx.lineTo(dx, dy);
+              }
+              ctx.closePath();
+              ctx.stroke();
+
+              this.raf = requestAnimationFrame(draw);
+            };
 
             this.raf = requestAnimationFrame(draw);
-          };
+          }
 
-          this.raf = requestAnimationFrame(draw);
+          destroy() {
+            cancelAnimationFrame(this.raf);
+            this.resizeObserver.disconnect();
+          }
         }
 
-        destroy() {
-          cancelAnimationFrame(this.raf);
-          this.resizeObserver.disconnect();
-        }
-      }
-
-      global.ElectricBorder = ElectricBorder;
-    })(window);
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('#projects .project-card').forEach((card) => {
-        new ElectricBorder(card, {
-          color: '#ff2b2b',   // border/glow color — match your accent color
-          speed: 8,           // animation speed
-          chaos: 0.13,        // distortion intensity
-          borderRadius: 16    // match your card's existing corner radius
+        global.ElectricBorder = ElectricBorder;
+      })(window);
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("#projects .project-card").forEach((card) => {
+          new ElectricBorder(card, {
+            color: "#ff2b2b", // border/glow color — match your accent color
+            speed: 8, // animation speed
+            chaos: 0.13, // distortion intensity
+            borderRadius: 16, // match your card's existing corner radius
+          });
         });
       });
-    });
-  </script>
+    </script>
+    <script>
+      (function () {
+        const canvas = document.getElementById("lightningBg");
+        if (!canvas) return;
 
-</body>
+        function resizeCanvas() {
+          canvas.width = canvas.clientWidth;
+          canvas.height = canvas.clientHeight;
+        }
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
 
+        const gl = canvas.getContext("webgl", {
+          alpha: true,
+          premultipliedAlpha: false,
+        });
+        if (!gl) {
+          console.error("WebGL not supported");
+          return;
+        }
+
+        const vertexShaderSource = `
+    attribute vec2 aPosition;
+    void main() { gl_Position = vec4(aPosition, 0.0, 1.0); }
+  `;
+
+        const fragmentShaderSource = `
+    precision mediump float;
+    uniform vec2 iResolution;
+    uniform float iTime;
+    uniform float uHue;
+    uniform float uXOffset;
+    uniform float uSpeed;
+    uniform float uIntensity;
+    uniform float uSize;
+    #define OCTAVE_COUNT 10
+    vec3 hsv2rgb(vec3 c){vec3 rgb=clamp(abs(mod(c.x*6.0+vec3(0.0,4.0,2.0),6.0)-3.0)-1.0,0.0,1.0);return c.z*mix(vec3(1.0),rgb,c.y);}
+    float hash11(float p){p=fract(p*.1031);p*=p+33.33;p*=p+p;return fract(p);}
+    float hash12(vec2 p){vec3 p3=fract(vec3(p.xyx)*.1031);p3+=dot(p3,p3.yzx+33.33);return fract((p3.x+p3.y)*p3.z);}
+    mat2 rotate2d(float theta){float c=cos(theta);float s=sin(theta);return mat2(c,-s,s,c);}
+    float noise(vec2 p){vec2 ip=floor(p);vec2 fp=fract(p);
+      float a=hash12(ip);float b=hash12(ip+vec2(1.0,0.0));float c=hash12(ip+vec2(0.0,1.0));float d=hash12(ip+vec2(1.0,1.0));
+      vec2 t=smoothstep(0.0,1.0,fp);return mix(mix(a,b,t.x),mix(c,d,t.x),t.y);}
+    float fbm(vec2 p){float value=0.0;float amplitude=0.5;
+      for(int i=0;i<OCTAVE_COUNT;++i){value+=amplitude*noise(p);p*=rotate2d(0.45);p*=2.0;amplitude*=0.5;}
+      return value;}
+    void main(){
+      vec2 uv = gl_FragCoord.xy / iResolution.xy;
+      uv = 2.0 * uv - 1.0;
+      uv.x *= iResolution.x / iResolution.y;
+      uv.x += uXOffset;
+      uv += 2.0 * fbm(uv * uSize + 0.8 * iTime * uSpeed) - 1.0;
+      float dist = abs(uv.x);
+      vec3 baseColor = hsv2rgb(vec3(uHue / 360.0, 0.7, 0.8));
+      vec3 col = baseColor * pow(mix(0.0, 0.07, hash11(iTime * uSpeed)) / dist, 1.0) * uIntensity;
+      float a = clamp(max(col.r, max(col.g, col.b)), 0.0, 1.0);
+      gl_FragColor = vec4(col, a);
+    }
+  `;
+
+        function compileShader(source, type) {
+          const shader = gl.createShader(type);
+          gl.shaderSource(shader, source);
+          gl.compileShader(shader);
+          if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+            console.error("Shader compile error:", gl.getShaderInfoLog(shader));
+            gl.deleteShader(shader);
+            return null;
+          }
+          return shader;
+        }
+
+        const vertexShader = compileShader(
+          vertexShaderSource,
+          gl.VERTEX_SHADER,
+        );
+        const fragmentShader = compileShader(
+          fragmentShaderSource,
+          gl.FRAGMENT_SHADER,
+        );
+        if (!vertexShader || !fragmentShader) return;
+
+        const program = gl.createProgram();
+        gl.attachShader(program, vertexShader);
+        gl.attachShader(program, fragmentShader);
+        gl.linkProgram(program);
+        if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+          console.error(
+            "Program linking error:",
+            gl.getProgramInfoLog(program),
+          );
+          return;
+        }
+        gl.useProgram(program);
+
+        const vertices = new Float32Array([
+          -1, -1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1,
+        ]);
+        const vertexBuffer = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+        gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
+
+        const aPosition = gl.getAttribLocation(program, "aPosition");
+        gl.enableVertexAttribArray(aPosition);
+        gl.vertexAttribPointer(aPosition, 2, gl.FLOAT, false, 0, 0);
+
+        const iResolutionLocation = gl.getUniformLocation(
+          program,
+          "iResolution",
+        );
+        const iTimeLocation = gl.getUniformLocation(program, "iTime");
+        const uHueLocation = gl.getUniformLocation(program, "uHue");
+        const uXOffsetLocation = gl.getUniformLocation(program, "uXOffset");
+        const uSpeedLocation = gl.getUniformLocation(program, "uSpeed");
+        const uIntensityLocation = gl.getUniformLocation(program, "uIntensity");
+        const uSizeLocation = gl.getUniformLocation(program, "uSize");
+
+        const hue = 190;
+        const xOffset = 0;
+        const speed = 0.7;
+        const intensity = 0.6;
+        const size = 1.4;
+
+        const startTime = performance.now();
+        function render() {
+          resizeCanvas();
+          gl.viewport(0, 0, canvas.width, canvas.height);
+          gl.uniform2f(iResolutionLocation, canvas.width, canvas.height);
+          gl.uniform1f(iTimeLocation, (performance.now() - startTime) / 1000.0);
+          gl.uniform1f(uHueLocation, hue);
+          gl.uniform1f(uXOffsetLocation, xOffset);
+          gl.uniform1f(uSpeedLocation, speed);
+          gl.uniform1f(uIntensityLocation, intensity);
+          gl.uniform1f(uSizeLocation, size);
+          gl.drawArrays(gl.TRIANGLES, 0, 6);
+          requestAnimationFrame(render);
+        }
+        requestAnimationFrame(render);
+      })();
+    </script>
+  </body>
 </html>
