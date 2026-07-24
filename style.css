@@ -601,8 +601,7 @@ button:hover ~ .cursor-ring { width: 52px; height: 52px; border-color: var(--bla
 .fb-2 { bottom: 60px; left: -20px; animation: floatBadge 4s 1s ease-in-out infinite; }
 .fb-3 { top: 50%; right: -30px; animation: floatBadge 4s 2s ease-in-out infinite; }
 .fb-4 { bottom: 20px; right: 10px; animation: floatBadge 4s 3s ease-in-out infinite; }
-.fb-5 { top: 100px; left: -30px; animation: floatBadge 4s 1.5s ease-in-out infinite; }
-.fb-6 { top: -20px; left: 50%; transform: translateX(-50%); animation: floatBadge 4s 2.5s ease-in-out infinite; }
+
 
 @keyframes floatBadge {
   0%, 100% { transform: translateY(0); }
@@ -1490,32 +1489,4 @@ img { max-width: 100%; height: auto; }
   filter: blur(32px);
   opacity: 0.3;
   background: linear-gradient(-30deg, var(--electric-light-color), transparent, var(--electric-border-color));
-}
-#skills {
-  position: relative;
-  background: #050507;
-  overflow: hidden;
-}
-.lightning-container {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
-#skills .container { position: relative; z-index: 1; }
-
-#skills .section-tag,
-#skills .section-sub { color: rgba(255,255,255,0.6); border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); }
-#skills .section-title { color: #fff; }
-#skills .skill-card { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.12); }
-#skills .skill-card h5 { color: #fff; }
-#skills .skill-card:hover { border-color: #00d4ff; }
-
-#skills .skill-card .devicon-express-original {
-  color: #ffffff;
-}
-#skills .skill-card .devicon-nextjs-plain {
-  color: #ffffff;
 }
